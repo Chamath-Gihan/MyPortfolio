@@ -7,10 +7,71 @@
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
 
     <style>
-        
+        header{
+            border: 2px solid black;
+        }
+        header>div>h3{
+            display: inline-block;
+        }
+        header>div{
+            display: inline-block;
+        }
+        header>div>h3:nth-child(1){
+            position: absolute;
+            right: 18%;
+            top: 3%;
+        }
+        header>div>h3:nth-child(2){
+            position: absolute;
+            right: 13%;
+            top: 3%;
+        }
+        header>div>h3:nth-child(3){
+            position: absolute;
+            right: 8%;
+            top: 3%;
+        }
+        header>div>h3:nth-child(4){
+            position: absolute;
+            right: 3%;
+            top: 3%;
+        }
+        header>img{
+            display: inline-block;
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 99.8%;
+            height: 45px;
+            border: 2px solid darkgray;
+            background-color: darkgray;
+            justify-content:center;
+            align-items:center;
+        }
+        footer>div>h3{
+            color: white;
+            padding-left: 45%;
+        }
+
     </style>
 </head>
+<header>
+    <img src="images/ijse%20logo.png" alt="ijse logo">
+    <div>
+        <h3>Home</h3>
+        <h3>Services</h3>
+        <h3>Contacts</h3>
+        <h3>About Us</h3>
+    </div>
+</header>
 <body>
-
+<div></div>
 </body>
+<footer>
+    <div>
+        <h3>Developed By IJSE</h3>
+    </div>
+</footer>
 </html>
