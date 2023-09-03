@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>case 03</title>
     <style>
+        body{
+            position: relative;
+        }
         body>section:first-child>div:first-child{
             width: 350px;
             height: 350px;
@@ -17,13 +20,33 @@
             border-radius: 100%;
         }
         body>section:first-child>div{
-            position: absolute;
+            position: fixed;
             margin: auto;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
         }
+        body>section:nth-child(2),section:nth-child(3),section:last-child{
+            width: 300px;
+            height: 300px;
+            border: 25px solid yellow;
+            border-radius: 100%;
+            position: relative;
+        }
+        body>section:nth-child(2){
+            top: 282.5px;
+            left: 40.75%;
+            background-color: blue;
+            border-color: blue;
+            text-align: center;
+        }
+        body>section:nth-child(2)>p{
+            padding-top: 100px;
+            color: #FFFFFF;
+            font-size: 35px;
+        }
+        
     </style>
 </head>
 <body>
@@ -32,7 +55,7 @@
     <div></div>
 </section>
 <section>
-    <div></div>
+    <p>Hello</p>
 </section>
 <section>
     <div></div>
