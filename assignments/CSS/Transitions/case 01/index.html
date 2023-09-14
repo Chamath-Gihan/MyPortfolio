@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.2-web/css/all.min.css">
+    <style>
+        body>section{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        body>section>div{
+            position: relative;
+            right: 260px;
+            width: 400px;
+            height: 100px;
+            border: 1px solid black;
+            background-color: yellow;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            transition-duration: 2s;
+            transition-property: all;
+        }
+        body>section>div:hover{
+            right: 0;
+            transition-duration: 2s;
+            transition-property: all;
+        }
+        body>section>div>h1{
+            padding-left: 50px;
+            color: black;
+            display: inline-block;
+        }
+        body>section>div>img:nth-child(2){
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <h1>Menu 01</h1>
+        <img src="assets/images/call.png" alt="png">
+    </div>
+    <div>
+        <h1>Menu 02</h1>
+        <img src="assets/images/gmail.png" alt="png">
+    </div>
+    <div>
+        <h1>Menu 03</h1>
+        <img src="assets/images/telegram.png" alt="png">
+    </div>
+    <div>
+        <h1>Menu 04</h1>
+        <img src="assets/images/whatsapp.png" alt="png">
+    </div>
+    <div>
+        <h1>Menu 05</h1>
+        <img src="assets/images/map.png" alt="png">
+    </div>
+</section>
+</body>
+</html>
