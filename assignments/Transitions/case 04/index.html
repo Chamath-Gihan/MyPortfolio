@@ -7,7 +7,50 @@
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
 
     <style>
-        
+        /*--------------------------body styles------------------------*/
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: yellow;
+        }
+        /*--------------------------middle circle styles------------------------*/
+        .first-div{
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            border: 20px solid black;
+            position: relative;
+            border-top: 20px solid orangered;
+        }
+        /*--------------------------line styles------------------------*/
+        .second-div{
+            width: 50%;
+            height: 20px;
+            background: orangered;
+            position: absolute;
+            top: 162PX;
+            right: 30PX;
+            bottom: 0;
+            rotate: 140deg;
+        }
+        /*--------------------------dot styles------------------------*/
+        .third-div{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background: blue;
+            right: 30px;
+            top: 58px;
+        }
+        /*----------------------------transition-------------------*/
+        .first-div:hover{
+            rotate: 360deg;
+            transition: 1.5s;
+        }
     </style>
 </head>
 <body>
