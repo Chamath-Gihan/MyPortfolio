@@ -1,0 +1,17 @@
+body>main>section:nth-child(1)>section:nth-child(2)>img{
+    position: relative;
+    left: 3.5%;
+    top: 10vh;
+}
+body>main>section:nth-child(1){
+    position: relative;
+}
+body>main>section:nth-child(1)>section:nth-child(2)>nav>img{
+    padding-top: 15px;
+}
+body>main>section:nth-child(1)>section:nth-child(2)>nav{
+    display: inline-grid;
+    position: relative;
+    right: 50px;
+    top: -550px;
+}
