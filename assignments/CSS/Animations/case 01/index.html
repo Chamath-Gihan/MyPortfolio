@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation case 01</title>
+    <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <style>
+        body>section{
+            background-color: yellow;
+            height: 100vh;
+        }
+
+        body>section>div{
+            position: relative;
+            left: 0;
+            animation-name: anima;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            width: 15vw;
+            height: 10vw;
+            background: yellowgreen;
+            border-radius: 15%;
+        }
+
+        @keyframes anima {
+            0%{
+                transform: rotate(0deg);
+                background: blue;
+                left: 0;
+                top: 100px;
+            }
+            25%{
+                transform: rotate(180deg);
+                background: orangered;
+                right: 1500px;
+                top: 100px;
+            }
+            50%{
+                transform: rotate(360deg);
+                background: greenyellow;
+                left: 1600px;
+                top: 600px;
+            }
+            75%{
+                transform: rotate(180deg);
+                background: deeppink;
+                left: 0;
+                top: 600px;
+            }
+            100%{
+                transform: rotate(360deg);
+                background: gray;
+                left: 0;
+                top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+</section>
+</body>
+</html>

@@ -1,3 +1,4 @@
+/*
 body>main>section:nth-child(1)>section:nth-child(2)>img{
     position: relative;
     left: 3.5%;
@@ -53,4 +54,74 @@ body>main>section:nth-child(2)>section:nth-child(3)>article{
 body>main>section:nth-child(2)>section:nth-child(3)>h1{
     color: #FFFFFF;
     font-size: 100px;
+}
+*/
+
+.header{
+    position: fixed;
+    height: 5vw;
+    right: 0;
+    left: 0;
+    background-color: gray;
+    z-index: 100;
+}
+
+.home, .about, .education, .quote-02, .projects, .assignments, .gallery{
+    position: relative;
+    height: 100vh;
+    right: 0;
+    left: 0;
+}
+
+.quote-01, .skills, .contact{
+    position: relative;
+    height: 50vh;
+    right: 0;
+    left: 0;
+    background-color: yellow;
+}
+
+.main-background{
+    height: 100vh;
+    right: 0;
+    position: relative;
+    left: 0;
+    padding: 5vw;
+    background-color: red;
+}
+
+.home-background{
+    height: 100%;
+    width: 100%;
+    background: url("/assets/images/banner.png");
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.home-links{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 4vw;
+    height: 35vw;
+    background-color: white;
+    justify-content: space-around;
+    box-shadow: 0 0 3vh;
+    align-items: center;
+    margin-right: 2vw;
+    border-radius: 2vw;
+}
+
+.home-links>a>img{
+    height: 3vw;
+    transition: 0.3s;
+}
+
+.home-links>a>img:hover{
+    height: 4vw;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 0.5vw grey);
 }
