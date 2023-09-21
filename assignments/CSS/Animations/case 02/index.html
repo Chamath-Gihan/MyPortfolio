@@ -5,19 +5,53 @@
     <title>animations case 02</title>
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <style>
+        body{
+            overflow: hidden;
+        }
         body>section{
             height: 100vh;
+            width: max-content;
             position: relative;
             right: 0;
             left: 0;
             display: flex;
+            animation-name: anima;
+            animation-duration: 10s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        body>section>img{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        @keyframes anima {
+            0%{
+                left: 0;
+            }
+            25%{
+                left: -100vw;
+            }
+            50%{
+                left: -200vw;
+            }
+            75%{
+                left: -300vw;
+            }
+            100%{
+                left: -400vw;
+            }
         }
     </style>
 </head>
 <body>
-<section><img src="assets/images/town.png" alt="camera photo"></section>
-<section><img src="assets/images/town2.png" alt="tree photo"></section>
-<section><img src="assets/images/town3.jpeg" alt="ballon photo"></section>
-<section><img src="assets/images/town4.jpeg" alt="laptop photo"></section>
+<section>
+    <img src="assets/images/Simpsons-HD-1920x1080.jpg" alt="camera photo">
+    <img src="assets/images/600528.png" alt="tree photo">
+    <img src="assets/images/street_night_wet_155637_1920x1080.jpg" alt="ballon photo">
+    <img src="assets/images/town6.png" alt="laptop photo">
+    <img src="assets/images/town5.jpg" alt="laptop photo">
+</section>
 </body>
 </html>
