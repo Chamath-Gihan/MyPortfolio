@@ -14,7 +14,73 @@
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="assets/styles/laptop.css">
     <style>
+        .projects{
+            height: 107vh;
+        }
+        
+        .projects-sec-01{
+            top: 1vw;
+            background-color: #F4F4F4;
+            height: 103vh;
+            position: relative;
+        }
 
+        .projects-div-01{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .projects-div-01>h1{
+            font-size: 2.5vw;
+        }
+
+        .projects-div-01>h2{
+            opacity: 75%;
+            font-size: 2vw;
+        }
+
+        .projects-div-02>a>img{
+            transition: 0.3s;
+            width: 65vw;
+            display: inline-block;
+            position: relative;
+            left: 16vw;
+            border-top-right-radius: 5vw;
+            border-top-left-radius: 5vw;
+        }
+
+        .projects-div-02>a>img:hover{
+            transition: 0.3s;
+            filter: drop-shadow(0 0 1vw lightskyblue);
+            width: 66vw;
+        }
+
+        .projects-div-03{
+            display: inline-block;
+            position: relative;
+            left: 30vw;
+        }
+
+        .projects-div-03>h3{
+            opacity: 75%;
+            font-size: 1vw;
+        }
+
+        .projects-div-03>a>h3{
+            position: relative;
+            left: 15vw;
+            font-size: 1vw;
+            color: #0061F3;
+            transition: 0.3s;
+        }
+
+        .projects-div-03>a>h3:hover{
+            transition: 0.3s;
+            filter: drop-shadow(0 0 0.5vw lightskyblue);
+        }
     </style>
 </head>
 <body>
@@ -150,21 +216,23 @@
         </section>
 
         <section class="projects">
-            <div class="projects-div-01">
-                <h1>Discover Your Ideal Software Engineering Journey: Explore My Positions .</h1>
-                <h2>There is nothing that cannot be done .</h2>
-            </div>
-            <div class="projects-div-02">
-                <a href="https://github.com/Chamath-Gihan/Smart-library-First-semester-final-project">
-                    <img src="assets/images/smart%20library%20project%20photo.png" alt="project photo">
-                </a>
-            </div>
-            <div class="projects-div-03">
-                <h3>Software applications streamline tasks, enhancing efficiency and simplifying daily life.</h3>
-                <a href="https://github.com/Chamath-Gihan?tab=repositories">
-                    <h3>View All Projects ></h3>
-                </a>
-            </div>
+            <section class="projects-sec-01">
+                <div class="projects-div-01">
+                    <h1>Discover Your Ideal Software Engineering Journey: Explore My Positions .</h1>
+                    <h2>There is nothing that cannot be done .</h2>
+                </div>
+                <div class="projects-div-02">
+                    <a href="https://github.com/Chamath-Gihan/Smart-library-First-semester-final-project">
+                        <img src="assets/images/smart%20library%20project%20photo.png" alt="project photo">
+                    </a>
+                </div>
+                <div class="projects-div-03">
+                    <h3>Software applications streamline tasks, enhancing efficiency and simplifying daily life.</h3>
+                    <a href="https://github.com/Chamath-Gihan?tab=repositories">
+                        <h3>View All Projects ></h3>
+                    </a>
+                </div>
+            </section>
         </section>
         <section class="assignments"></section>
         <section class="skills"></section>
