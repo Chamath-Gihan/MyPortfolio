@@ -57,7 +57,7 @@
 
 /*---------------------------------Section sizing--------------------------------------*/
 
-.home, .about, .education, .quote-02, .projects, .assignments, .gallery{
+.home, .about, .education, .quote-02, .projects, .gallery{
     position: relative;
     height: 100vh;
     right: 0;
@@ -69,7 +69,7 @@
     height: 50vh;
     right: 0;
     left: 0;
-    background-color: yellow;
+    background-color: black;
 }
 
 /*----------------------------------CSS for Home----------------------------------------*/
@@ -488,7 +488,6 @@
 ----------------------------------CSS for assignments-----------------------------
 
 .assignments{
-    position: relative;
     height: 104vh;
 }
 
