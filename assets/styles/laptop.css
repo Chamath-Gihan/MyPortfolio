@@ -59,7 +59,7 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
 
 .header{
     position: fixed;
-    height: 4vw;
+    height: 3vw;
     right: 0;
     left: 0;
     z-index: 100;
@@ -73,20 +73,20 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
     display: flex;
 }
 
-.nav-list>h3{
+.nav-list>h4{
     padding-left: 2vw;
     padding-right: 2vw;
     transition: 0.3s;
 }
 
-.nav-list>h3:hover{
+.nav-list>h4:hover{
     border: 1px solid grey;
     border-radius: 5vw;
     cursor: pointer;
     padding-left: 2vw;
     padding-right: 2vw;
-    font-size: 1.25vw;
-    transition: 0.3s;
+    font-size: 1vw;
+    transition: 0.1s;
     filter: drop-shadow(0 0 1vw grey);
 }
 
@@ -110,8 +110,8 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
     right: 0;
     position: relative;
     left: 0;
-    padding: 3vw;
-    background-color: red;
+    padding-top: 3vw;
+    /*background-color: red;*/
 }
 
 .home-background{
