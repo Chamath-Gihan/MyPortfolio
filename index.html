@@ -14,7 +14,41 @@
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="assets/styles/laptop.css">
     <style>
+        .about>img:nth-child(1){
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            height: 96vh;
+            display: inline-block;
+        }
 
+        .about{
+            display: flex;
+        }
+
+        .about-content{
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            position: relative;
+            right: 0;
+            height: 96vh;
+        }
+
+        .about-content>div{
+            position: relative;
+            right: 0;
+            display: inline-block;
+            height: 23.2vw;
+            background-color: pink;
+            border: 1px solid black;
+        }
+
+        .about-content>div:nth-child(2)>h1, .about-content>div:nth-child(2)>p{
+            display: inline-block;
+        }
+
+        .about-content>div:nth-child(3)>h1, .about-content>div:nth-child(3)>p{
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -63,10 +97,10 @@
                 </section>
             </section>
         </section>
+
         <section class="about">
-            <section class="about-white-space">
+            <img src="assets/images/who%20me.png" alt="Chamath gihan's photo">
                 <section class="about-content">
-                    <img src="assets/images/who%20me.png" alt="Chamath gihan's photo">
                     <div>
                         <h1>Who am I ?</h1>
                         <p>I'm Chamath Gihan, a 18-year-old software engineering student from Sri Lanka. I'm currently pursuing a BSc (Hons)
@@ -84,7 +118,6 @@
                         </p>
                     </div>
                 </section>
-            </section>
         </section>
         <section class="education"></section>
         <section class="quote-01"></section>
