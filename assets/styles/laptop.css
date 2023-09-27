@@ -79,13 +79,20 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
     transition: 0.3s;
 }
 
+.nav-list>h4:first-child{
+    background-color: black;
+    color: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 100vw;
+}
+
 .nav-list>h4:hover{
-    border: 1px solid grey;
+    border-bottom: 2px solid grey;
     border-radius: 5vw;
     cursor: pointer;
     padding-left: 2vw;
     padding-right: 2vw;
-    font-size: 1vw;
+    /*font-size: 1vw;*/
     transition: 0.1s;
     filter: drop-shadow(0 0 1vw grey);
 }
