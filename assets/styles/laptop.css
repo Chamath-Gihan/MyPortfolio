@@ -519,3 +519,46 @@
     width: 66vw;
     filter: drop-shadow(0 0 1vw lightskyblue);
 }
+
+/*-----------------------CSS for skills----------------------*/
+
+.skills>hgroup{
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skills>hgroup>h2{
+    font-size: 2vw;
+}
+
+.skills>hgroup>h4{
+    font-size: 1.2vw;
+}
+
+.skills>div{
+    top: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.skills>div>a>img{
+    width: 4vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    transition: 0.3s;
+}
+
+.skills>div>a>img:hover{
+    border: 1px solid lightskyblue;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 1vw lightskyblue);
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.skills>div:nth-child(3){
+    margin-top: 2vw;
+}
