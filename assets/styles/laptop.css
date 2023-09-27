@@ -192,7 +192,6 @@
 .about-content>div:nth-child(1)>p, .about-content>div:nth-child(2)>p{
     font-size: 1.5vw;
     display: inline-block;
-    /*padding-bottom: 1vw;*/
     padding-left: 2vw;
     padding-right: 2vw;
 }
