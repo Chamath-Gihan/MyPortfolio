@@ -79,20 +79,26 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
     transition: 0.3s;
 }
 
-.nav-list>h4:first-child{
-    background-color: black;
-    color: #FFFFFF;
-    border: 1px solid black;
-    border-radius: 100vw;
+.nav-list>img:first-child{
+    padding-top: 0.3vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-list>img:hover{
+    transition: 0.3s;
+    filter: drop-shadow(0 0 1vw black);
+    transform: rotate(360deg);
 }
 
 .nav-list>h4:hover{
     border-bottom: 2px solid grey;
-    border-radius: 5vw;
+    border-radius: 3vw;
     cursor: pointer;
     padding-left: 2vw;
     padding-right: 2vw;
-    /*font-size: 1vw;*/
     transition: 0.1s;
     filter: drop-shadow(0 0 1vw grey);
 }
@@ -113,7 +119,7 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
 }
 
 .main-background{
-    height: 100vh;
+    height: 94.621vh;
     right: 0;
     position: relative;
     left: 0;
