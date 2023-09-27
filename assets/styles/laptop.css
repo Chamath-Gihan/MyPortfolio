@@ -80,6 +80,8 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
 }
 
 .nav-list>img:first-child{
+    padding-left: 2vw;
+    padding-right: 2vw;
     padding-top: 0.3vw;
     width: 2.5vw;
     height: 2.5vw;
@@ -88,6 +90,8 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
 }
 
 .nav-list>img:hover{
+    padding-left: 3vw;
+    padding-right: 3vw;
     transition: 0.3s;
     filter: drop-shadow(0 0 1vw black);
     transform: rotate(360deg);
