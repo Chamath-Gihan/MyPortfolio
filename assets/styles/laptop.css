@@ -414,3 +414,73 @@
     top: 7vw;
     position: relative;
 }
+
+/*----------------------------CSS for projects--------------------------*/
+
+.projects{
+    height: 107vh;
+}
+
+.projects-sec-01{
+    top: 1vw;
+    background-color: #F4F4F4;
+    height: 103vh;
+    position: relative;
+}
+
+.projects-div-01{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projects-div-01>h1{
+    font-size: 2.5vw;
+}
+
+.projects-div-01>h2{
+    opacity: 75%;
+    font-size: 2vw;
+}
+
+.projects-div-02>a>img{
+    transition: 0.3s;
+    width: 65vw;
+    display: inline-block;
+    position: relative;
+    left: 16vw;
+    border-top-right-radius: 5vw;
+    border-top-left-radius: 5vw;
+}
+
+.projects-div-02>a>img:hover{
+    transition: 0.3s;
+    filter: drop-shadow(0 0 1vw lightskyblue);
+    width: 66vw;
+}
+
+.projects-div-03{
+    display: inline-block;
+    position: relative;
+    left: 30vw;
+}
+
+.projects-div-03>h3{
+    opacity: 75%;
+    font-size: 1vw;
+}
+
+.projects-div-03>a>h3{
+    position: relative;
+    left: 15vw;
+    font-size: 1vw;
+    color: #0061F3;
+    transition: 0.3s;
+}
+
+.projects-div-03>a>h3:hover{
+    transition: 0.3s;
+    filter: drop-shadow(0 0 0.5vw lightskyblue);
+}
