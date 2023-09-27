@@ -59,7 +59,7 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
 
 .header{
     position: fixed;
-    height: 5vw;
+    height: 3vw;
     right: 0;
     left: 0;
     background-color: gray;
@@ -86,14 +86,14 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
     right: 0;
     position: relative;
     left: 0;
-    padding: 5vw;
+    padding: 3vw;
     background-color: red;
 }
 
 .home-background{
     height: 100%;
     width: 100%;
-    background: url("/assets/images/banner.png");
+    background: url("../images/banner.png");
     background-size: cover;
     display: flex;
     justify-content: flex-end;
