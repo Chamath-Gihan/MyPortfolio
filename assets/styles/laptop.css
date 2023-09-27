@@ -101,6 +101,11 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
 
 }
 
+.home-background>div:nth-child(1){
+    border-radius: 100%;
+    width: 21vw;
+}
+
 .home-background>div:nth-child(1)>img{
     border-radius: 100%;
     width: 21vw;
