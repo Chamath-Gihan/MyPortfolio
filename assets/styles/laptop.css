@@ -59,11 +59,35 @@ body>main>section:nth-child(2)>section:nth-child(3)>h1{
 
 .header{
     position: fixed;
-    height: 3vw;
+    height: 4vw;
     right: 0;
     left: 0;
-    background-color: gray;
     z-index: 100;
+    background-color: #FFFFFF;
+}
+
+.nav-list{
+    margin-bottom: 0;
+    margin-top: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.nav-list>h3{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    transition: 0.3s;
+}
+
+.nav-list>h3:hover{
+    border: 1px solid grey;
+    border-radius: 5vw;
+    cursor: pointer;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 1.25vw;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 1vw grey);
 }
 
 .home, .about, .education, .quote-02, .projects, .assignments, .gallery{
