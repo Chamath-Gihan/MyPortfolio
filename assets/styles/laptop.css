@@ -322,7 +322,7 @@
     bottom: 6vw;
 }
 
-/*-----------------------------------------CSS for Qoute-01--------------------------------------*/
+/*-----------------------------------------CSS for Quote-01--------------------------------------*/
 
 .quote-01{
     background-color: black;
@@ -365,4 +365,52 @@
 
 .quote-01>div:nth-child(3){
     left: 11vw;
+}
+
+/*----------------------------------CSS for Quote-2---------------------------*/
+
+.quote-02{
+    background-color: #97B3B2;
+    display: flex;
+}
+
+.quote-02-paragraph>p, .quote-02-paragraph>h4{
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.quote-02-paragraph>p{
+    font-size: 5vw;
+    width: 26vw;
+    text-align: right;
+    right: 5vw;
+    position: relative;
+    top: 4vw;
+}
+
+.quote-02-paragraph>h4{
+    font-size: 1.1vw;
+    position: relative;
+    right: 5vw;
+    bottom: 2vw;
+}
+
+.quote-02-paragraph{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.quote-02-paragraph-photo{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+}
+
+.quote-02-paragraph-photo>img{
+    height: 35vw;
+    top: 7vw;
+    position: relative;
 }
