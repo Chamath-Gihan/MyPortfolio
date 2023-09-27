@@ -324,3 +324,45 @@
 
 /*-----------------------------------------CSS for Qoute-01--------------------------------------*/
 
+.quote-01{
+    background-color: black;
+    color: #FFFFFF;
+}
+
+.quote-01>div:nth-child(1){
+    border-right: 3px solid #FFFFFF;
+    border-left: 3px solid #FFFFFF;
+    width: 75vw;
+    display: inline-block;
+    position: relative;
+    left: 11vw;
+    top: 1.5vw;
+}
+
+.quote-01>div:nth-child(1)>p{
+    font-size: 3vw;
+    width: 50vw;
+    height: 14vw;
+    position: relative;
+    left: 13vw;
+    display: inline-block;
+    top: 1vw;
+}
+
+.quote-01>div:nth-child(2), .quote-01>div:nth-child(3){
+    width: 3vw;
+    height: 3vw;
+    border: 2px solid #FFFFFF;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    display: inline-block;
+    position: relative;
+}
+
+.quote-01>div:nth-child(2){
+    right: 72vw;
+}
+
+.quote-01>div:nth-child(3){
+    left: 11vw;
+}
