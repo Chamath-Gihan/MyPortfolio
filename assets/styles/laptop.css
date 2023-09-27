@@ -1,3 +1,5 @@
+/*-------------------------------CSS for Header---------------------------------*/
+
 .header{
     position: fixed;
     height: 3vw;
@@ -47,6 +49,8 @@
     transition: 0.1s;
     filter: drop-shadow(0 0 1vw grey);
 }
+
+/*---------------------------------Section sizing--------------------------------------*/
 
 .home, .about, .education, .quote-02, .projects, .assignments, .gallery{
     position: relative;
