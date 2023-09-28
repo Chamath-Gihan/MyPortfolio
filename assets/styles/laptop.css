@@ -21,7 +21,8 @@
     display: flex;
 }
 
-.nav-list>h4{
+.nav-list>a>h4{
+    color: black;
     padding-left: 2vw;
     padding-right: 2vw;
     transition: 0.3s;
@@ -45,7 +46,7 @@
     transform: rotate(360deg);
 }
 
-.nav-list>h4:hover{
+.nav-list>a>h4:hover{
     border-bottom: 2px solid grey;
     border-radius: 3vw;
     cursor: pointer;
