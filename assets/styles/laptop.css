@@ -581,3 +581,71 @@
 .skills>div:nth-child(3){
     margin-top: 2vw;
 }
+
+/*---------------------------------------------CSS for gallery------------------------------*/
+
+.gallery{
+    background: url("../images/white-dreams-lens-flare-bokeh-effect-motion-graphic-gif-gfycat.gif");
+    background-size: 100%;
+}
+
+.gallery, .gallery>div, .gallery>img{
+    position: relative;
+}
+
+.gallery>div:nth-child(1){
+    display: flex;
+    color: #FFFFFF;
+    left: 42vw;
+    top: 12vw;
+    width: 16vw;
+    height: 25vw;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 8%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery>div>h1{
+    font-size: 2.5vw;
+}
+
+.gallery>div>h1:nth-child(2){
+    width: 6vw;
+}
+
+.gallery>img{
+    border-radius: 2vw;
+}
+
+.gallery>img:nth-child(2){
+    height: 18vw;
+    bottom: 27vw;
+    left: 9vw;
+}
+
+.gallery>img:nth-child(3){
+    height: 23vw;
+    bottom: 22vw;
+    left: 53vw;
+}
+
+.gallery>img:nth-child(4){
+    bottom: 2.5vw;
+    height: 21vw;
+    right: 29vw;
+}
+
+.gallery>img:nth-child(5){
+    height: 10vw;
+    right: 22vw;
+    bottom: 8vw;
+}
+
+.gallery>img:nth-child(6){
+    height: 18vw;
+    left: 20vw;
+    bottom: 2vw;
+}
