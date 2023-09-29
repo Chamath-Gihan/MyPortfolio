@@ -18,6 +18,16 @@
             height: 104vh;
         }
 
+        .gallery{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none; /* Make sure the effect doesn't interfere with user interactions */
+            z-index: -1; /* Place the effect behind the content */
+            background: url('assets/images/back.gif') repeat;
+            animation: moveWater 4s linear infinite
+        }
         .gallery, .gallery>div, .gallery>img{
             position: relative;
         }
