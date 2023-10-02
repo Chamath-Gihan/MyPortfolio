@@ -600,6 +600,21 @@ body{
     }
 }
 
+.assignments-sec-01>a:nth-child(3){
+    position: relative;
+    left: 43vw;
+    bottom: 6vw;
+    font-size: 1vw;
+    color: #0061F3;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.assignments-sec-01>a:nth-child(3):hover{
+    transition: 0.3s;
+    filter: drop-shadow(0 0 0.7vw lightskyblue);
+}
+
 /*-----------------------CSS for skills----------------------*/
 
 .skills{
