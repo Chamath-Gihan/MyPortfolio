@@ -4,7 +4,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 12px; 
+    width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -631,9 +631,15 @@
 }
 
 .gallery>img{
+    filter: grayscale(85%); /* Converts the images to black and white by default */
     border-radius: 2vw;
+    transition: 1.5s;
 }
 
+.gallery>img:hover{
+    filter: grayscale(0%); /* Reverts the image to its original colors on hover */
+    transition: 1.5s;
+}
 .gallery>img:nth-child(2){
     height: 18vw;
     bottom: 27vw;
