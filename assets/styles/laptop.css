@@ -3,6 +3,9 @@
     font-family: Serif;
 }
 
+body{
+    overflow-x: hidden;
+}
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -547,17 +550,54 @@
     position: relative;
 }
 
-.assignments-sec-01>a>img{
+.assignments-sec-02>a>img{
     position: relative;
     top: 4vw;
-    left: 16vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     width: 65vw;
 }
 
-.assignments-sec-01>a>img:hover{
+.assignments-sec-02>a>img:hover{
     transition: 0.3s;
     width: 66vw;
     filter: drop-shadow(0 0 1vw lightskyblue);
+}
+
+.assignments{
+    height: 104vh;
+}
+
+.assignments-sec-02{
+    height: 93vh;
+    width: max-content;
+    position: relative;
+    right: 0;
+    left: 0;
+    display: flex;
+    animation-name: anima;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-direction: inherit;
+    animation-timing-function: linear;
+}
+
+@keyframes anima {
+    0%{
+        left: 0;
+    }
+    25%{
+        left: -100vw;
+    }
+    50%{
+        left: -200vw;
+    }
+    75%{
+        left: -300vw;
+    }
+    100%{
+        left: -400vw;
+    }
 }
 
 /*-----------------------CSS for skills----------------------*/
