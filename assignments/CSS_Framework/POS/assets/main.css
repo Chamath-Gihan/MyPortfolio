@@ -1,15 +1,43 @@
-.navbar-nav .nav-link.active {
-    color: #FFFFFF;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    margin: 0;
 }
 
-.navbar-nav .nav-link {
-    border-bottom: 1px solid #f2e7c3;
-    padding: 10px;
-    margin: 0 5px;
-    transition: 0.3s;
+header {
+    background-color: #007bff;
+    color: #ffffff;
 }
 
 .navbar-nav .nav-link:hover {
-    transition: 0.3s;
-    border-bottom: 1px solid red;
+    color: #ffcc00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    text-align: center;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.2); /* Blue box shadow on hover */
 }
