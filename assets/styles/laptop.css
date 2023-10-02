@@ -638,12 +638,12 @@
 
 .gallery>img:hover{
     filter: grayscale(0%); /* Reverts the image to its original colors on hover */
-    transition: 1.5s;
+    transition: 1s;
 }
 .gallery>img:nth-child(2){
     height: 18vw;
     bottom: 27vw;
-    left: 9vw;
+    left: 13vw;
 }
 
 .gallery>img:nth-child(3){
@@ -668,4 +668,9 @@
     height: 18vw;
     left: 20vw;
     bottom: 2vw;
+}
+
+.gallery>img:nth-child(7){
+    right: 13vw;
+    bottom: 3vw;
 }
