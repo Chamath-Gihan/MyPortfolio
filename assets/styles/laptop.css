@@ -55,8 +55,11 @@
     transform: rotate(360deg);
 }
 
+.nav-list>a{
+    text-decoration: none;
+}
+
 .nav-list>a>h4{
-    /*opacity: 70%;*/
     color: black;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -65,7 +68,7 @@
 
 .nav-list>a>h4:hover{
     opacity: 100%;
-    border-bottom: 4px solid blue;
+    border-bottom: 4px solid black;
     /*border-radius: 3vw;*/
     cursor: pointer;
     padding-left: 2vw;
