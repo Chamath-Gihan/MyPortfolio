@@ -171,8 +171,14 @@
     margin-bottom: 2vw;
     height: 96vh;
     display: inline-block;
+    transition: 2s;
+    filter: grayscale(85%);
 }
 
+.about>img:nth-child(1):hover{
+    transition: 2s;
+    filter: grayscale(0%);
+}
 .about{
     display: flex;
 }
