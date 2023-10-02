@@ -442,6 +442,15 @@
     position: relative;
 }
 
+.quote-02-paragraph-photo>img{
+    transition: 2s;
+    filter: opacity(0.4);
+}
+.quote-02-paragraph-photo>img:hover{
+    transition: 2s;
+    filter: opacity(1);
+}
+
 /*----------------------------CSS for projects--------------------------*/
 
 .projects{
@@ -499,6 +508,10 @@
     font-size: 1vw;
 }
 
+.projects-div-03>a{
+    text-decoration: none;
+}
+
 .projects-div-03>a>h3{
     position: relative;
     left: 15vw;
@@ -509,7 +522,7 @@
 
 .projects-div-03>a>h3:hover{
     transition: 0.3s;
-    filter: drop-shadow(0 0 0.5vw lightskyblue);
+    filter: drop-shadow(0 0 0.7vw lightskyblue);
 }
 
 /*----------------------------------CSS for assignments-----------------------------*/
