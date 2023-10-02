@@ -41,3 +41,7 @@ section {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 0, 255, 0.2); /* Blue box shadow on hover */
 }
+
+#customer-form{
+    text-decoration: none;
+}
