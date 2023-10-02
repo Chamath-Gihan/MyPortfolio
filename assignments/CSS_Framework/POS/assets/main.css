@@ -1,0 +1,15 @@
+.navbar-nav .nav-link.active {
+    color: #FFFFFF;
+}
+
+.navbar-nav .nav-link {
+    border-bottom: 1px solid #f2e7c3;
+    padding: 10px;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    transition: 0.3s;
+    border-bottom: 1px solid red;
+}
