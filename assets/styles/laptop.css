@@ -69,7 +69,6 @@
 .nav-list>a>h4:hover{
     opacity: 100%;
     border-bottom: 4px solid black;
-    /*border-radius: 3vw;*/
     cursor: pointer;
     padding-left: 2vw;
     padding-right: 2vw;
