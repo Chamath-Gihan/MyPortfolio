@@ -490,7 +490,7 @@
     filter: drop-shadow(0 0 0.5vw lightskyblue);
 }
 
-----------------------------------CSS for assignments-----------------------------
+/*----------------------------------CSS for assignments-----------------------------*/
 
 .assignments{
     height: 104vh;
