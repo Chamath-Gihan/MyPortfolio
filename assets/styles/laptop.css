@@ -3,6 +3,19 @@
     font-family: Serif;
 }
 
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid black;
+    background-color: white;
+}
+
+::-webkit-scrollbar-track {
+    border: 2px solid white;
+    background-color: black;
+}
 /*-------------------------------CSS for Header---------------------------------*/
 
 .header{
@@ -15,6 +28,7 @@
 }
 
 .nav-list{
+    backdrop-filter: blur(10px);
     margin-bottom: 0;
     margin-top: 0;
     justify-content: center;
@@ -42,21 +56,21 @@
 }
 
 .nav-list>a>h4{
-    opacity: 70%;
+    /*opacity: 70%;*/
     color: black;
     padding-left: 2vw;
     padding-right: 2vw;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .nav-list>a>h4:hover{
     opacity: 100%;
-    border-bottom: 2px solid grey;
-    border-radius: 3vw;
+    border-bottom: 4px solid blue;
+    /*border-radius: 3vw;*/
     cursor: pointer;
     padding-left: 2vw;
     padding-right: 2vw;
-    transition: 0.1s;
+    transition: 0.2s;
     filter: drop-shadow(0 0 1vw grey);
 }
 
@@ -639,9 +653,9 @@
 }
 
 .gallery>img:nth-child(5){
-    height: 10vw;
-    right: 22vw;
-    bottom: 8vw;
+    height: 18vw;
+    right: 24vw;
+    bottom: 6vw;
 }
 
 .gallery>img:nth-child(6){
