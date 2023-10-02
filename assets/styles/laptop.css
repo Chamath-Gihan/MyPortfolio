@@ -633,13 +633,13 @@
 }
 
 .gallery>img{
-    filter: grayscale(85%); /* Converts the images to black and white by default */
+    filter: grayscale(85%);
     border-radius: 2vw;
     transition: 1.5s;
 }
 
 .gallery>img:hover{
-    filter: grayscale(0%); /* Reverts the image to its original colors on hover */
+    filter: grayscale(0%);
     transition: 1s;
 }
 .gallery>img:nth-child(2){
