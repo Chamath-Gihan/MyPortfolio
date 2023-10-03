@@ -29,7 +29,7 @@
             bottom: 6vw;
         }
 
-        #main-section>div:nth-child(5){
+        #main-section>div:nth-child(6){
             top: 6vw;
         }
     </style>
@@ -41,19 +41,16 @@
     <div></div>
     <div></div>
     <div></div>
+    <div></div>
 </section>
 
 <script>
 
-    let colors = document.querySelectorAll("div");
-    colors[0].style.backgroundColor = "red";
-    colors[1].style.backgroundColor = "blue";
-    colors[2].style.backgroundColor = "green";
-    colors[3].style.backgroundColor = "yellow";
-    colors[4].style.backgroundColor = "pink";
+    let colors1 = ["red","blue","green","yellow","pink","brown"];
+    let colors = document.querySelectorAll("section>div");
 
-    for (i of colors){
-        console.log(i);
+    for (i in colors){
+        colors[i].style.backgroundColor = colors1[i];
     }
 
 </script>
