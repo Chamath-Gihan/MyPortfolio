@@ -1,0 +1,75 @@
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid black;
+    background-color: white;
+}
+
+::-webkit-scrollbar-track {
+    border: 2px solid white;
+    background-color: black;
+}
+
+.main-section{
+    width: 99vw;
+    height: 102vh;
+    background-color: #FFFFFF;
+}
+.main-section>h1:nth-child(1){
+    left: 12vw;
+    top: 6vw;
+    position: fixed;
+    font-size: 14vw;
+    color: #0dcaf0;
+    opacity: 40%;
+    border: 5px solid deepskyblue;
+    border-radius: 3vw;
+    filter: drop-shadow(4px 4px 4px blue);
+}
+
+.second-section{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.second-section>a>div{
+    position: relative;
+    width: 30vw;
+    height: 15vw;
+    border: 3px solid blue;
+    border-radius: 3vw;
+    transition: 0.6s;
+}
+
+.second-section>a>div:hover{
+    filter: drop-shadow(4px 4px 4px blue);
+    transition: 0.6s;
+}
+
+.second-section>a{
+    margin-top: 7vw;
+}
+.second-section>a>div>img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 70%;
+    border-radius: 3vw;
+}
+
+.second-section>a>div>h3{
+    display: inline-block;
+    position: relative;
+    left: 9.5vw;
+    bottom: 11vw;
+    font-size: 2vw;
+    background: white;
+    border: 5px solid deepskyblue;
+    color: deepskyblue;
+    filter: drop-shadow(8px 8px 8px blue);
+}
