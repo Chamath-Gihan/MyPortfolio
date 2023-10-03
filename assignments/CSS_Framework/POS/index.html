@@ -19,8 +19,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link" href="assets/html/customer.html">Customer Manage</a>
+                    <a id="home" class="nav-link active" aria-current="page" >Home</a>
+                    <a id="customer" class="nav-link" >Customer Manage</a>
                     <a class="nav-link" href="#">Store Manage</a>
                     <a class="nav-link" href="#">Orders</a>
                 </div>
@@ -29,12 +29,12 @@
     </nav>
 </header>
 
-<main>
-    <section>
+<main class="main-01">
+    <section id="sec-01">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <a id="customer-form" href="assets/html/customer.html">
+                    <a id="customer-form-btn" >
                         <div class="box">
                             <h2>Customers</h2>
                             <p>Manage your customers here.</p>
@@ -59,7 +59,62 @@
     </section>
 </main>
 
+<main class="main-02">
+    <div class="container-2">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="customer-form">
+                    <h2>Customer Form</h2>
+                    <label for="customerId">Customer ID:</label>
+                    <input type="text" id="customerId" class="form-control">
+                    <label for="customerName">Name:</label>
+                    <input type="text" id="customerName" class="form-control">
+                    <label for="customerAddress">Address:</label>
+                    <input type="text" id="customerAddress" class="form-control">
+                    <label for="customerPhone">Telephone Number:</label>
+                    <input type="text" id="customerPhone" class="form-control">
+                    <button class="btn btn-primary mt-2">Save</button>
+                    <button class="btn btn-secondary mt-2">Clear</button>
+                    <button class="btn btn-warning mt-2">Edit</button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2>Customer Data</h2>
+                <table class="customer-table">
+                    <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Telephone Number</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Customer data rows will be inserted here dynamically using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
 
+<script>
+    let home = document.querySelector(".main-01");
+    let customer = document.querySelector(".main-02");
 
+    let btnCustomer = document.querySelector("#customer")
+    let btnHome = document.querySelector("#home")
+
+    customer.style.display = 'none';
+    btnHome.addEventListener("click", function () {
+        customer.style.display = 'none';
+        home.style.display= 'block'
+    })
+
+    btnCustomer.addEventListener('click', function () {
+        home.style.display = 'none';
+        customer.style.display= 'block'
+    })
+</script>
 </body>
 </html>

@@ -1,9 +1,5 @@
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f9fa;
-    margin: 0;
+
 }
 
 header {
@@ -17,14 +13,18 @@ header {
     cursor: pointer;
 }
 
-main {
-    flex: 1;
+.main-01 {
+    min-height: 94vh;
     display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    margin: 0;
+    flex: 1;
     justify-content: center;
     align-items: center;
 }
 
-section {
+#sec-01 {
     text-align: center;
 }
 
@@ -44,4 +44,52 @@ section {
 
 #customer-form{
     text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.container-2{
+    width: 97vw;
+    height: 94vh;
+}
+.customer-form {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-form label {
+    font-weight: bold;
+}
+
+.customer-form input[type="text"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.customer-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.customer-table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.customer-table th, .customer-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #dee2e6;
 }

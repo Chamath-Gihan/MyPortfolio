@@ -1,0 +1,25 @@
+#main-section{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ebebeb;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-section>div{
+    position: relative;
+    width: 15vw;
+    height: 6vw;
+    border: 2px solid #023e7d;
+}
+
+#main-section>div:nth-child(1){
+    bottom: 6vw;
+}
+
+#main-section>div:nth-child(6){
+    top: 6vw;
+}
