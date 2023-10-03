@@ -73,25 +73,23 @@
                     <input type="text" id="customerAddress" class="form-control">
                     <label for="customerPhone">Telephone Number:</label>
                     <input type="text" id="customerPhone" class="form-control">
-                    <button class="btn btn-primary mt-2">Save</button>
+                    <button id="customer-save-btn" class="btn btn-primary mt-2">Save</button>
                     <button class="btn btn-secondary mt-2">Clear</button>
                     <button class="btn btn-warning mt-2">Edit</button>
                 </div>
             </div>
             <div class="col-lg-6">
                 <h2>Customer Data</h2>
-                <table class="customer-table">
+                <table id="customer-table" class="customer-table">
                     <thead>
                     <tr>
-                        <th>Customer ID</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Telephone Number</th>
+                        <th id="customerId-table">Customer ID</th>
+                        <th id="customerName-table">Name</th>
+                        <th id="customerAddress-table">Address</th>
+                        <th id="customerPhone-table">Telephone Number</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <!-- Customer data rows will be inserted here dynamically using JavaScript -->
-                    </tbody>
+                    <tbody id="tbody"></tbody>
                 </table>
             </div>
         </div>
@@ -114,6 +112,41 @@
     btnCustomer.addEventListener('click', function () {
         home.style.display = 'none';
         customer.style.display= 'block'
+    })
+
+    let cus_id = document.querySelector("#customerId");
+    let cus_name = document.querySelector("#customerName");
+    let cus_address = document.querySelector("#customerAddress");
+    let cus_phone = document.querySelector("#customerPhone");
+    let btn_save = document.querySelector("#customer-save-btn");
+
+    var customers = [];
+
+    let tbody = document.querySelector("#tbody")
+    btn_save.addEventListener("click", function () {
+        var customer01 ={
+            customerId : cus_id.value,
+            customerName : cus_name.value,
+            customer_address : cus_address.value,
+            customer_telephone : cus_phone.value
+        }
+        customers.push(customer01);
+        console.log(customers);
+        let tr = document.createElement("tr");
+
+        let td1 = document.createElement("td")
+        let td2 = document.createElement("td")
+        let td3 = document.createElement("td")
+        let td4 = document.createElement("td")
+
+        td1.textContent = customer01.customerId;
+        td2.textContent = customer01.customerName;
+        td3.textContent = customer01.customer_address;
+        td4.textContent = customer01.customer_telephone;
+
+        tr.append(td1, td2, td3, td4);
+        tbody.append(tr);
+
     })
 </script>
 </body>
