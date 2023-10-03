@@ -11,7 +11,7 @@
             display: flex;
             height: 100vh;
             width: 100vw;
-            background-color: #0dcaf0;
+            background-color: #ebebeb;
             position: relative;
             flex-direction: row;
             justify-content: center;
@@ -22,7 +22,7 @@
             position: relative;
             width: 15vw;
             height: 6vw;
-            border: 2px solid black;
+            border: 2px solid #023e7d;
         }
 
         #main-section>div:nth-child(1){
@@ -46,13 +46,19 @@
 
 <script>
 
-    let colors1 = ["red","blue","green","yellow","pink","brown"];
+    let colors1 = ['#390099','#9e0059','#ff0054','#ff5400','#ffbd00','#d00000'];
     let colors = document.querySelectorAll("section>div");
 
-    for (i in colors){
-        colors[i].style.backgroundColor = colors1[i];
-    }
+        setInterval(process,400);
 
+        function process() {
+            for (let i = 0; i<colors.length; i++) {
+                colors[i].style.background = colors1[i];
+            }
+
+            let lastValue = colors1.pop();
+            colors1.unshift(lastValue);
+        }
 </script>
 </body>
 </html>
