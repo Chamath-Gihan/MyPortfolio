@@ -5,6 +5,103 @@
     <title>Animation case 04</title>
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+
+    <style>
+        body{
+            background: url("assets/images/sky.jpg");
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .road-parts{
+            position: absolute;
+            bottom: 0;
+            height: 60%;
+            width: 100%;
+            display: flex;
+            animation-name: road-animation;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .road {
+            height: 100%;
+            width: 100%;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .road-image{
+            height: 50%;
+            width: 100%;
+            background: url("assets/images/road.jpg");
+        }
+
+        .block-image{
+            height: 50%;
+            width: 100%;
+        }
+
+        .car-parts{
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 60vh;
+            margin: auto;
+            height: max-content;
+            width: 30vw;
+            z-index: 2;
+        }
+
+        .car-parts>img:first-child{
+            width: 30vw;
+        }
+
+        .car-parts>img:nth-child(2) {
+            width: 5.5vw;
+            top: 12vh;
+            left: 2.6vw;
+            position: absolute;
+        }
+
+        .car-parts>img:nth-child(3) {
+            width: 5.5vw;
+            top: 12vh;
+            left: 21vw;
+            position: absolute;
+        }
+
+        .wheel{
+            animation-name: wheel-animation;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+
+        }
+        @keyframes road-animation {
+            from{
+                left: 0;
+            }
+            to{
+                left: -400vw;
+            }
+        }
+
+        @keyframes wheel-animation{
+            0%{
+                rotate: 500deg;
+            }
+            80%{
+                rotate: -180deg;
+            }
+        }
+    </style>
 </head>
 <body>
 <section class="car-parts">
@@ -19,19 +116,19 @@
     </div>
     <div class="road">
         <img class="block-image" src="assets/images/city.png" alt="photo">
-        <div class="road-img"></div>
+        <div class="road-image"></div>
     </div>
     <div class="road">
         <img class="block-image" src="assets/images/city.png" alt="photo">
-        <div class="road-img"></div>
+        <div class="road-image"></div>
     </div>
     <div class="road">
         <img class="block-image" src="assets/images/city.png" alt="photo">
-        <div class="road-img"></div>
+        <div class="road-image"></div>
     </div>
     <div class="road">
         <img class="block-image" src="assets/images/city.png" alt="photo">
-        <div class="road-img"></div>
+        <div class="road-image"></div>
     </div>
 </section>
 </body>
