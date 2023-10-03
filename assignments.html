@@ -5,11 +5,25 @@
     <title>Assignments</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
-    <link rel="stylesheet" href="assets/styles/laptop.css">
 
     <style>
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 2px solid black;
+            background-color: white;
+        }
+
+        ::-webkit-scrollbar-track {
+            border: 2px solid white;
+            background-color: black;
+        }
+
         .main-section{
-            width: 100vw;
+            width: 99vw;
             height: 102vh;
             background-color: #FFFFFF;
         }
@@ -33,13 +47,42 @@
             justify-content: space-evenly;
         }
         .second-section>a>div{
-            margin-top: 7vw;
             position: relative;
             width: 30vw;
             height: 15vw;
-            border: 3px solid black;
+            border: 3px solid blue;
+            border-radius: 3vw;
+            transition: 0.3s;
         }
 
+        .second-section>a>div:hover{
+            filter: drop-shadow(4px 4px 4px blue);
+            transition: 0.3s;
+        }
+
+        .second-section>a{
+            margin-top: 7vw;
+        }
+        .second-section>a>div>img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 70%;
+            border-radius: 3vw;
+        }
+
+        .second-section>a>div>h3{
+            display: inline-block;
+            position: relative;
+            left: 9.5vw;
+            bottom: 11vw;
+            font-size: 2vw;
+            background: white;
+            border: 5px solid deepskyblue;
+            color: deepskyblue;
+            filter: drop-shadow(8px 8px 8px blue);
+        }
     </style>
 </head>
 <body>
@@ -47,22 +90,40 @@
     <h1>Assignments</h1>
     <section class="second-section">
         <a href="assignments/CSS/case%2001/index.html">
-            <div></div>
+            <div>
+                <img src="assets/images/Assignment%2001.png" alt="assignment 01">
+                <h3>CSS Case 01</h3>
+            </div>
         </a>
         <a href="assignments/CSS/case%2002/index.html">
-            <div></div>
+            <div>
+                <img src="assets/images/Assignment%2002.png" alt="assignment 02">
+                <h3>CSS Case 02</h3>
+            </div>
         </a>
         <a href="assignments/CSS/case%2003/index.html">
-            <div></div>
+            <div>
+                <img src="assets/images/Assignment%2003.png" alt="assignment 03">
+                <h3>CSS Case 03</h3>
+            </div>
         </a>
         <a href="assignments/CSS/case%2004/index.html">
-            <div></div>
+            <div>
+                <img src="assets/images/Assignment%2004.png" alt="assignment 04">
+                <h3>CSS Case 04</h3>
+            </div>
         </a>
         <a href="assignments/CSS/case%2005/index.html">
-            <div></div>
+            <div>
+                <img src="assets/images/Assignment%2005.png" alt="assignment 05">
+                <h3>CSS Case 05</h3>
+            </div>
         </a>
         <a href="assignments/CSS/case%2006/index.html">
-            <div></div>
+            <div>
+                <img src="assets/images/Assignment%2006.png" alt="assignment 06">
+                <h3>CSS Case 06</h3>
+            </div>
         </a>
     </section>
 
