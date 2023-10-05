@@ -3,130 +3,210 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Customer Manage</title>
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.css">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-
         header {
             background-color: #007bff;
             color: #ffffff;
+            padding: 10px 0;
+            border-bottom: 2px solid #0056b3;
         }
 
-        .navbar-nav .nav-link:hover {
-            color: #ffcc00;
-            text-decoration: underline;
-            cursor: pointer;
+        main {
+
+            width: 99vw;
+            height: 91.5vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
-        .customer-form {
-            max-width: 400px;
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #dee2e6;
+        .justify-content-center{
+            flex-wrap: nowrap;
+        }
+
+        .border-container {
+            border: 2px solid #007bff;
             border-radius: 10px;
-            background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 45vw;
         }
 
-        .customer-form label {
-            font-weight: bold;
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .customer-form h2,
+        .search-table h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
-        .customer-form input[type="text"] {
-            width: calc(100% - 20px);
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
+        #buttons{
+            display: flex;
+            justify-content: flex-end;
         }
 
-        .customer-form button {
-            width: 100%;
-            margin-top: 10px;
+        .btn-primary:focus,
+        .btn-primary:active {
+            background-color: #ffffff;
+            color: #007bff;
+            border: 1px solid #007bff;
         }
 
-        .customer-table {
-            margin-top: 20px;
-            width: 100%;
+        .customer-form-buttons{
+            margin-right: 1vw;
         }
 
-        .customer-table th, .customer-table td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #dee2e6;
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .nav-buttons:hover{
+            color: blue;
         }
     </style>
 </head>
 
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">POS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
-                    <a class="nav-link" href="#">Customer Manage</a>
-                    <a class="nav-link" href="#">Store Manage</a>
-                    <a class="nav-link" href="#">Orders</a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active nav-buttons" aria-current="page" href="../../index.html">Home</a>
+                    <a class="nav-link nav-buttons" href="#">Customer Management</a>
+                    <a class="nav-link nav-buttons" href="#">Store Management</a>
+                    <a class="nav-link nav-buttons" href="#">Orders</a>
                 </div>
             </div>
         </div>
     </nav>
 </header>
 
-
-
 <main>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="customer-form">
-                    <h2>Customer Form</h2>
-                    <label for="customerId">Customer ID:</label>
-                    <input type="text" id="customerId" class="form-control">
-                    <label for="customerName">Name:</label>
-                    <input type="text" id="customerName" class="form-control">
-                    <label for="customerAddress">Address:</label>
-                    <input type="text" id="customerAddress" class="form-control">
-                    <label for="customerPhone">Telephone Number:</label>
-                    <input type="text" id="customerPhone" class="form-control">
-                    <button class="btn btn-primary mt-2">Save</button>
-                    <button class="btn btn-secondary mt-2">Clear</button>
-                    <button class="btn btn-warning mt-2">Edit</button>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12 mb-3">
+                <div class="border-container">
+                    <div class="customer-form">
+                        <h2>Register new Customers</h2>
+                        <div class="mb-3">
+                            <label for="customerId" class="form-label">Customer ID:</label>
+                            <input type="text" id="customerId" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Name:</label>
+                            <input type="text" id="customerName" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerAddress" class="form-label">Address:</label>
+                            <input type="text" id="customerAddress" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerPhone" class="form-label">Telephone Number:</label>
+                            <input type="text" id="customerPhone" class="form-control">
+                        </div>
+                        <div id="buttons">
+                            <button class="btn btn-primary customer-form-buttons">Save</button>
+                            <button class="btn btn-secondary customer-form-buttons">Update</button>
+                            <button class="btn btn-warning customer-form-buttons">Delete</button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <h2>Customer Data</h2>
-                <table class="customer-table">
-                    <thead>
-                    <tr>
-                        <th>Customer ID</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Telephone Number</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <!-- Customer data rows will be inserted here dynamically using JavaScript -->
-                    </tbody>
-                </table>
+            <div class="col-lg-6 col-md-12 mb-3">
+                <div class="border-container">
+                    <div class="search-table">
+                        <h2>All customers are here</h2>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search Customer"
+                                   aria-label="Search Customer" aria-describedby="button-search">
+                            <button class="btn btn-outline-primary" type="button" id="button-search">Search</button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Customer ID</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Telephone Number</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Stuart Little</td>
+                                    <td>New york</td>
+                                    <td>555-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Alan Walker</td>
+                                    <td>America</td>
+                                    <td>555-5678</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Stive Smith</td>
+                                    <td>Australia</td>
+                                    <td>555-9090</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Stuart Little</td>
+                                    <td>New york</td>
+                                    <td>555-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Alan Walker</td>
+                                    <td>America</td>
+                                    <td>555-5678</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Stive Smith</td>
+                                    <td>Australia</td>
+                                    <td>555-9090</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Stuart Little</td>
+                                    <td>New york</td>
+                                    <td>555-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Alan Walker</td>
+                                    <td>America</td>
+                                    <td>555-5678</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </main>
 
+<script src="../../../assets/js/bootstrap.js"></script>
 </body>
 
 </html>
