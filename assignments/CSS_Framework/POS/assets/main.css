@@ -6,13 +6,11 @@ header {
 }
 
 main {
-
     width: 99vw;
     height: 91.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .navbar-nav .nav-link:hover {
