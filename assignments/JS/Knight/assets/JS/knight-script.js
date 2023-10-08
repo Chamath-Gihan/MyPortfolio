@@ -18,9 +18,13 @@ function updateValues() {
     waitTime = animateTime * 40;
     speedText.textContent = animateTime;
     waitingTimeText.textContent = waitTime;
+    if (isAnimating) {
+        animateColorBoxes();
+    }
 }
 
 function animateColorBoxes() {
+    clearInterval(interval);
     interval = setInterval(function() {
         const opacityValues = calculateOpacityValues();
 
@@ -72,11 +76,7 @@ btnStop.addEventListener('click', function() {
 });
 
 rangeInput.addEventListener('input', function() {
-    clearInterval(interval);
-    isAnimating = false;
     updateValues();
-    animateColorBoxes();
-    isAnimating = true;
 });
 
 audio.addEventListener('ended', function() {
