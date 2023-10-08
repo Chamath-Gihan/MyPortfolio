@@ -22,15 +22,70 @@
         margin: auto;
     }
     .header-section{
+        display: flex;
         width: 99vw;
         height: 34vh;
         border: 1px solid red;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #knight-H1{
+        font-size: 3vw;
+        color: #FFFFFF;
+    }
+    .h2-section>h2{
+        display: inline-block;
+        font-size: 2vw;
+        color: #f21b3f;
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
     }
 
     .content-section{
         width: 99vw;
         height: 59.5vh;
         border: 1px solid black;
+    }
+
+    #speed, #waiting-time{
+        color: #736bf2;
+    }
+
+    #button-start {
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 5vw;
+        height: 1.5vw;
+        font-size: 1vw;
+    }
+
+    #button-stop {
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 5vw;
+        height: 1.5vw;
+        font-size: 1vw;
+    }
+
+    #range {
+        width: 15vw;
+        height: 2vw;
+    }
+
+    .colour-box{
+        width: 99vw;
+        height: 25vh;
+    }
+
+    .btn-section{
+        width: 99vw;
+        height: 34vh;
     }
 </style>
 <body>
@@ -40,16 +95,29 @@
         <div>
             <h1 id="knight-H1">Knight Rider</h1>
         </div>
-        <div>
-            <h2>Speed</h2>
-            <h2>50</h2>
-            <h2>Waiting Time</h2>
-            <h2>2000</h2>
+        <div class="h2-section">
+            <h2>Speed :</h2>
+            <h2 id="speed">50</h2>
+            <h2>| Waiting Time :</h2>
+            <h2 id="waiting-time">2000</h2>
         </div>
     </section>
 
     <section class="content-section">
-
+        <section class="colour-box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section class="btn-section">
+            <button id="button-start">Start</button>
+            <button id="button-stop">Stop</button>
+            <div>
+                <input id="range" type="range" min="50" max="150" value="50">
+            </div>
+        </section>
     </section>
 </main>
 <script src="assets/JS/knight-script.js"></script>
