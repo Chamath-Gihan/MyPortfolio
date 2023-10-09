@@ -752,3 +752,78 @@ body{
 }
 
 /*---------------------------------------CSS for contact section-----------------------*/
+
+.contact{
+    background-color: #F4F4F4;
+}
+.contact-first{
+    height: 30vh;
+}
+.contact-quote{
+    height: 20vh;
+    background-color: black;
+    color: white;
+}
+.contact-first{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-quote{
+    display: flex;
+}
+
+.contact-contact{
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-contact>h2{
+    font-size: 1.5vw;
+    position: relative;
+    left: 2vw;
+}
+
+.contact-icons{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    height: 20vh;
+}
+
+.gmail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gmail>a:first-child>img{
+    width: 5vw;
+}
+.contact-call{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-call>div:first-child{
+    display: flex;
+    width: 12vw;
+    justify-content: space-between;
+}
+
+.contact-call>div:first-child>a>img{
+    width: 3vw;
+}
+.contact-location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-location>a>img{
+    width: 5vw;
+}
