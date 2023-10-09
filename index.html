@@ -28,6 +28,7 @@
         }
         .contact-first{
             display: flex;
+            flex-direction: column;
         }
 
         .contact-quote{
@@ -36,18 +37,35 @@
 
         .contact-contact{
             display: flex;
+            height: 8vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-contact>h2{
+            font-size: 1.5vw;
         }
 
         .contact-icons{
             display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: center;
         }
 
         .gmail{
             display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
+        .gmail>a:first-child>img{
+            width: 5vw;
+        }
         .contact-call{
             display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .contact-location{
@@ -344,7 +362,11 @@
                                 <img src="assets/images/telegram.png" alt="telegram icon">
                             </a>
                         </div>
-                        <div></div>
+                        <div>
+                            <a href="tel:+94779850632">
+                                <h3>+94 77 9850 632</h3>
+                            </a>
+                        </div>
                     </div>
                     <div class="contact-location">
                         <a href="https://goo.gl/maps/UVVcd4eiwUw1kemx8">
