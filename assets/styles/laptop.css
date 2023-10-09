@@ -798,6 +798,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    bottom: 1vw;
 }
 
 .gmail>a:first-child>img{
@@ -822,6 +824,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    bottom: 1vw;
 }
 
 .contact-location>a>img{

@@ -14,7 +14,19 @@
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="assets/styles/laptop.css">
     <style>
+        #mail, #address, #number{
+            text-decoration: none;
+            color: blue;
+        }
 
+        .icon{
+            transition: 0.3s;
+        }
+
+        .icon:hover{
+            transition: 0.3s;
+            filter: drop-shadow(0 0 1vw lightskyblue);
+        }
     </style>
 </head>
 <body>
@@ -290,33 +302,33 @@
                 <div class="contact-icons">
                     <div class="gmail">
                         <a href="mailto:wchamathgihan@gmail.com">
-                            <img src="assets/images/gmail.png" alt="gmailicon">
+                            <img class="icon" src="assets/images/gmail.png" alt="gmailicon">
                         </a>
-                        <a href="mailto:wchamathgihan@gmail.com">wchamathgihan@gmail.com</a>
+                        <a id="mail" href="mailto:wchamathgihan@gmail.com">wchamathgihan@gmail.com</a>
                     </div>
                     <div class="contact-call">
                         <div>
                             <a href="tel:+94779850632">
-                                <img src="assets/images/call.png" alt="call icon">
+                                <img class="icon" src="assets/images/call.png" alt="call icon">
                             </a>
                             <a href="https://wa.me/+94779850632">
-                                <img src="assets/images/whatsapp.png" alt="whatsapp icon">
+                                <img class="icon" src="assets/images/whatsapp.png" alt="whatsapp icon">
                             </a>
                             <a href="https://t.me/Chamath_Gihan">
-                                <img src="assets/images/telegram.png" alt="telegram icon">
+                                <img class="icon" src="assets/images/telegram.png" alt="telegram icon">
                             </a>
                         </div>
                         <div>
-                            <a href="tel:+94779850632">
+                            <a id="number" href="tel:+94779850632">
                                 <h3>+94 77 9850 632</h3>
                             </a>
                         </div>
                     </div>
                     <div class="contact-location">
                         <a href="https://goo.gl/maps/UVVcd4eiwUw1kemx8">
-                            <img src="assets/images/map.png" alt="location icon">
+                            <img class="icon" src="assets/images/map.png" alt="location icon">
                         </a>
-                        <a href="https://goo.gl/maps/UVVcd4eiwUw1kemx8">Galle, Sri Lanka</a>
+                        <a id="address" href="https://goo.gl/maps/UVVcd4eiwUw1kemx8">Galle, Sri Lanka</a>
                     </div>
                 </div>
             </section>
