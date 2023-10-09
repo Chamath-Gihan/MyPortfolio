@@ -777,9 +777,9 @@ body{
     justify-content: center;
 }
 
-.contact-quote>h1{
-    font-size: 3.2vw;
-    width: 60vw;
+.contact-quote>p{
+    font-size: 3vw;
+    width: 52vw;
 }
 
 .contact-contact{
