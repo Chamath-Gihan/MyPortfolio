@@ -755,12 +755,14 @@ body{
 
 .contact{
     background-color: #F4F4F4;
+    height: 60vh;
 }
+
 .contact-first{
     height: 30vh;
 }
 .contact-quote{
-    height: 20vh;
+    height: 30vh;
     background-color: black;
     color: white;
 }
@@ -771,6 +773,13 @@ body{
 
 .contact-quote{
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-quote>h1{
+    font-size: 3.2vw;
+    width: 60vw;
 }
 
 .contact-contact{
@@ -830,4 +839,18 @@ body{
 
 .contact-location>a>img{
     width: 5vw;
+}
+
+#mail, #address, #number{
+    text-decoration: none;
+    color: blue;
+}
+
+.icon{
+    transition: 0.3s;
+}
+
+.icon:hover{
+    transition: 0.3s;
+    filter: drop-shadow(0 0 1vw lightskyblue);
 }

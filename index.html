@@ -14,18 +14,40 @@
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="assets/styles/laptop.css">
     <style>
-        #mail, #address, #number{
-            text-decoration: none;
-            color: blue;
+        footer{
+            height: 30vh;
+            position: relative;
+            left: 0;
+            right: 0;
+        }
+        .footer-links{
+            height: 20vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
         }
 
-        .icon{
+        .copyright{
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copyright>h4{
+            color: black;
+            opacity: 80%;
+        }
+
+        .footer-links>a>img{
+            height: 4vw;
             transition: 0.3s;
         }
 
-        .icon:hover{
+        .footer-links>a>img:hover{
+            height: 5vw;
             transition: 0.3s;
-            filter: drop-shadow(0 0 1vw lightskyblue);
+            filter: drop-shadow(0 0 0.5vw grey);
         }
     </style>
 </head>
@@ -338,26 +360,33 @@
         </section>
     </main>
 
-    <!--<footer>
-        <nav>
-            <menu>
+    <footer>
+        <section class="footer-links">
+            <a href="https://www.youtube.com/@Chamath_Gihan">
                 <img src="assets/images/youtube.png" alt="youtube icon">
+            </a>
+            <a href="https://twitter.com/Chamath_gihan">
                 <img src="assets/images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://www.facebook.com/Chamath.Gihan01">
                 <img src="assets/images/facebook.png" alt="facebook icon">
+            </a>
+            <a href="https://www.github.com/Chamath-Gihan">
                 <img src="assets/images/gihub.png" alt="gihub icon">
+            </a>
+            <a href="https://www.linkedin.com/in/chamath-gihan">
                 <img src="assets/images/linked-in.png" alt="linked-in icon">
+            </a>
+            <a href="https://www.instagram.com/chamath_gihan">
                 <img src="assets/images/instagram.png" alt="instagram icon">
+            </a>
+            <a href="https://www.tiktok.com/@chamath_gihan">
                 <img src="assets/images/tiktok.png" alt="tiktok icon">
-                <a href="https://www.youtube.com/@Chamath_Gihan">YouTube  </a>
-                <a href="https://www.youtube.com/@Chamath_Gihan">Twitter  </a>
-                <a href="https://www.youtube.com/@Chamath_Gihan">Facebook  </a>
-                <a href="https://www.youtube.com/@Chamath_Gihan">GitHub  </a>
-                <a href="https://www.youtube.com/@Chamath_Gihan">Linked-In  </a>
-                <a href="https://www.youtube.com/@Chamath_Gihan">Instagram  </a>
-                <a href="https://www.youtube.com/@Chamath_Gihan">TikTok  </a>
-            </menu>
-        </nav>
-        <small>Copyright &copy; 2023 Chamath Gihan . All Rights Reserved</small>
-    </footer>-->
+            </a>
+        </section>
+        <section class="copyright">
+            <h4>Copyright &copy; 2023 Chamath Gihan . All Rights Reserved</h4>
+        </section>
+    </footer>
 </body>
 </html>
