@@ -5,7 +5,7 @@ header {
     border-bottom: 2px solid #0056b3;
 }
 
-#background{
+#background-orders{
     position: fixed;
     z-index: -1;
     width: 102vw;
