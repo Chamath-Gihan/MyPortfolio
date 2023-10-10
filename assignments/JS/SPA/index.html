@@ -5,6 +5,7 @@
     <title>POS SPA Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 <header>
@@ -17,10 +18,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active nav-buttons" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link nav-buttons" href="assets/html/customer.html">Customer Management</a>
-                    <a class="nav-link nav-buttons" href="assets/html/item.html">Store Management</a>
-                    <a class="nav-link nav-buttons" href="assets/html/orders.html">Orders</a>
+                    <a class="nav-link active nav-buttons" aria-current="page" id="lnkHome">Home</a>
+                    <a class="nav-link nav-buttons" id="lnkCustomer">Customer Management</a>
+                    <a class="nav-link nav-buttons" id="lnkItem">Store Management</a>
+                    <a class="nav-link nav-buttons" id="lnkOrders">Orders</a>
                 </div>
             </div>
         </div>
@@ -33,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <a id="customer-form-btn" href="assets/html/customer.html">
+                    <a id="customer-form-btn">
                         <div class="box">
                             <h2>Customers</h2>
                             <p>Manage your customers here.</p>
@@ -42,7 +43,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <a id="item-form-button" href="assets/html/item.html">
+                    <a id="item-form-button">
                         <div class="box">
                             <h2>Store</h2>
                             <p>Manage store here.</p>
@@ -50,7 +51,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <a id="order-form-button" href="assets/html/orders.html">
+                    <a id="order-form-button">
                         <div class="box">
                             <h2>Orders</h2>
                             <p>Manage your orders here.</p>
@@ -63,7 +64,20 @@
 </main>
 
 <script>
-    let main = document.querySelector("")
+    let main = document.querySelector(".main-01");
+    let customer = document.querySelector(".main-02");
+    let item = document.querySelector(".main-03");
+    let order = document.querySelector(".main-04");
+
+
+    let lnkHome = document.querySelector("#lnkHome");
+    let lnkCustomer = document.querySelector("#lnkCustomer");
+    let lnkCustomer2 = document.querySelector("#customer-form-btn");
+    let lnkItem = document.querySelector("#lnkItem");
+    let lnkItem2 = document.querySelector("#item-form-button");
+    let lnkOrder = document.querySelector("#lnkOrders");
+    let lnkOrder2 = document.querySelector("#order-form-button");
+
 </script>
 </body>
 </html>
