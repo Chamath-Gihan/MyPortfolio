@@ -177,3 +177,69 @@ header {
     width: 101vw;
     height: 92vh;
 }
+
+.main-03 {
+
+    width: 99vw;
+    height: 91.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.justify-content-center{
+    flex-wrap: nowrap;
+}
+
+.border-container {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45vw;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-form h2,
+.search-table h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.item-form-buttons{
+    margin-right: 1vw;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.nav-buttons:hover{
+    color: blue;
+}
+
+#background-item{
+    position: fixed;
+    z-index: -1;
+    width: 101vw;
+    height: 92vh;
+}
