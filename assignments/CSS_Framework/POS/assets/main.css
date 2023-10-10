@@ -5,6 +5,12 @@ header {
     border-bottom: 2px solid #0056b3;
 }
 
+#background{
+    position: fixed;
+    width: 101vw;
+    height: 92vh;
+}
+
 main {
     width: 99vw;
     height: 91.5vh;
@@ -31,6 +37,7 @@ main {
 }
 
 #sec-01 {
+    z-index: 1;
     text-align: center;
 }
 
@@ -45,7 +52,7 @@ main {
 
 .box:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.2); /* Blue box shadow on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
 }
 
 #customer-form{
