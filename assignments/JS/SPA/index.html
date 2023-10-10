@@ -65,7 +65,7 @@
 
 <main class="main-02">
     <img id="background-customer" src="assets/images/giphy2.gif" alt="background">
-    <div class="container">
+    <div class="container-customer">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-12 mb-3">
                 <div class="border-container">
@@ -87,7 +87,7 @@
                             <label for="customerPhone" class="form-label">Telephone Number:</label>
                             <input type="text" id="customerPhone" class="form-control">
                         </div>
-                        <div id="buttons">
+                        <div id="main-02-buttons">
                             <button class="btn btn-primary customer-form-buttons">Save</button>
                             <button class="btn btn-secondary customer-form-buttons">Update</button>
                             <button class="btn btn-warning customer-form-buttons">Delete</button>
@@ -103,7 +103,7 @@
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" placeholder="Search Customer"
                                    aria-label="Search Customer" aria-describedby="button-search">
-                            <button class="btn btn-outline-primary" type="button" id="button-search">Search</button>
+                            <button class="btn btn-outline-primary" type="button" id="button-search-customer">Search</button>
                         </div>
                         <div class="table-container">
                             <table class="table">
@@ -174,6 +174,117 @@
     </div>
 </main>
 
+<main class="main-03">
+    <img id="background-item" src="assets/images/giphy2.gif" alt="background">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12 mb-3">
+                <div class="border-container">
+                    <div class="item-form">
+                        <h2>Register new Items</h2>
+                        <div class="mb-3">
+                            <label for="itemId" class="form-label">Item ID:</label>
+                            <input type="text" id="itemId" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemName" class="form-label">Name:</label>
+                            <input type="text" id="itemName" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemQuantity" class="form-label">Quantity:</label>
+                            <input type="text" id="itemQuantity" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="itemPrice" class="form-label">Price:</label>
+                            <input type="text" id="itemPrice" class="form-control">
+                        </div>
+                        <div id="main-03-buttons">
+                            <button class="btn btn-primary item-form-buttons">Save</button>
+                            <button class="btn btn-secondary item-form-buttons">Update</button>
+                            <button class="btn btn-warning item-form-buttons">Delete</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 mb-3">
+                <div class="border-container">
+                    <div class="search-table">
+                        <h2>All Items are here</h2>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search Items"
+                                   aria-label="Search Items" aria-describedby="button-search">
+                            <button class="btn btn-outline-primary" type="button" id="button-search-item">Search</button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Item ID</th>
+                                    <th>Name</th>
+                                    <th>Quantity</th>
+                                    <th>Price(Rs.)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>White Sugar</td>
+                                    <td>10</td>
+                                    <td>100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Chocolate</td>
+                                    <td>15</td>
+                                    <td>150.00</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Coco-cola</td>
+                                    <td>20</td>
+                                    <td>250.00</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>White Sugar</td>
+                                    <td>10</td>
+                                    <td>100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Chocolate</td>
+                                    <td>15</td>
+                                    <td>150.00</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Coco-cola</td>
+                                    <td>20</td>
+                                    <td>250.00</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>White Sugar</td>
+                                    <td>10</td>
+                                    <td>100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Chocolate</td>
+                                    <td>15</td>
+                                    <td>150.00</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
 <script src="assets/js/bootstrap.js"></script>
 <script>
     let main = document.querySelector(".main-01");
@@ -192,6 +303,7 @@
 
     main.style.display = 'flex';
     customer.style.display = 'none';
+    item.style.display = 'none';
 
     lnkHome.addEventListener("click", function () {
         main.style.display = 'flex';
