@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Oders</title>
+    <title>Orders</title>
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,6 +12,15 @@
             color: #ffffff;
             padding: 10px 0;
             border-bottom: 2px solid #0056b3;
+        }
+
+        #background{
+            position: fixed;
+            z-index: -1;
+            width: 102vw;
+            height: 93vh;
+            right: 0vw;
+            bottom: 0vw;
         }
 
         #orderContent {
@@ -33,6 +42,11 @@
         .content-box-2 {
             background-color: #007bff;
             color: white;
+        }
+
+        #btnAddToTable{
+            position: relative;
+            top: 0.5vw;
         }
     </style>
 </head>
@@ -58,6 +72,7 @@
 </header>
 
 <main class="container-fluid" id="orderContent">
+    <img id="background" src="../images/giphy2.gif" alt="background">
     <div class="container-fluid mt-4">
         <!-- Main tile -->
         <div class="jumbotron pt-4">
@@ -166,8 +181,6 @@
                                             <input class="form-control" id="txtQTYOnHand" type="text">
                                         </div>
                                     </div>
-                                    <hr>
-                                    <hr>
                                     <div class="col-12 mt-4">
                                         <div class="form-group">
                                             <label>Order Quantity :</label>
@@ -239,7 +252,7 @@
                 </div>
             </div>
             <!-- Order Table -->
-            <div class="col-md-12 mt-4" style="height: 180px; overflow-y: scroll">
+            <div class="col-md-12 mt-4" style="height: 380px; overflow-y: scroll">
                 <table class="table table-bordered text-white">
                     <thead class="bg-primary">
                     <tr>
