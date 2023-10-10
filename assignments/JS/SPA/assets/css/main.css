@@ -273,3 +273,49 @@ header {
     width: 101vw;
     height: 92vh;
 }
+
+
+/*--------------------------------------------------Order-----------------------------------------------------*/
+
+
+#background-orders{
+    position: fixed;
+    z-index: -1;
+    width: 102vw;
+    height: 93vh;
+    right: 0vw;
+    bottom: 0vw;
+}
+
+#orderContent {
+    padding-top: 20px;
+}
+
+.card-header {
+    color: white;
+}
+
+.control-error {
+    color: red;
+}
+
+#orderTable {
+    max-height: 180px;
+}
+
+.content-box-2 {
+    background-color: #007bff;
+    color: white;
+}
+
+#btnAddToTable{
+    position: relative;
+    top: 0.5vw;
+}
+
+#order-h1{
+    display: inline-block;
+    position: relative;
+    left: 42vw;
+    color: blue;
+}
