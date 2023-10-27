@@ -41,6 +41,25 @@ $(document).ready(function() {
         return isValid;
     }
 
+    function enableSaveButton() {
+        if (customerIDField.hasClass('is-invalid') ||
+            customerNameField.hasClass('is-invalid') ||
+            customerAddressField.hasClass('is-invalid') ||
+            customerPhoneField.hasClass('is-invalid') ||
+            customerIDField.val() === '' ||
+            customerNameField.val() === '' ||
+            customerAddressField.val() === '' ||
+            customerPhoneField.val() === '') {
+            $('#btnSaveCustomer').prop('disabled', true);
+            $('#btnUpdateCustomer').prop('disabled', true);
+            $('#btnDeleteCustomer').prop('disabled', true);
+        } else {
+            $('#btnSaveCustomer').prop('disabled', false);
+            $('#btnUpdateCustomer').prop('disabled', false);
+            $('#btnDeleteCustomer').prop('disabled', false);
+        }
+    }
+
     $('#btnSaveCustomer').click(function(event) {
         event.preventDefault();
 
@@ -57,6 +76,9 @@ $(document).ready(function() {
         } else {
             emptyFieldMessage.hide();
         }
+
+        // Enable/Disable buttons based on input validation
+        enableSaveButton();
     });
 
     customerIDField.on('keyup', function() {
@@ -78,19 +100,4 @@ $(document).ready(function() {
         validateInput(regexSalary, customerPhoneField, invalidSalaryMessage);
         enableSaveButton();
     });
-
-    function enableSaveButton() {
-        if (customerIDField.hasClass('is-invalid') ||
-            customerNameField.hasClass('is-invalid') ||
-            customerAddressField.hasClass('is-invalid') ||
-            customerPhoneField.hasClass('is-invalid') ||
-            customerIDField.val() === '' ||
-            customerNameField.val() === '' ||
-            customerAddressField.val() === '' ||
-            customerPhoneField.val() === '') {
-            $('#btnSaveCustomer').prop('disabled', true);
-        } else {
-            $('#btnSaveCustomer').prop('disabled', false);
-        }
-    }
 });

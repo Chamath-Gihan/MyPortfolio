@@ -196,26 +196,29 @@
                         <h2>Register new Items</h2>
                         <div class="mb-3">
                             <label for="itemId" class="form-label">Item ID:</label>
-                            <input type="text" id="itemId" class="form-control">
+                            <input type="text" id="itemId" class="form-control" placeholder="E.g., I00-001">
+                            <div id="invalidItemIdMessage" class="invalid-feedback">Invalid Item ID. Please follow the format I00-001.</div>
                         </div>
                         <div class="mb-3">
                             <label for="itemName" class="form-label">Name:</label>
-                            <input type="text" id="itemName" class="form-control">
+                            <input type="text" id="itemName" class="form-control" placeholder="E.g., Chocolate">
+                            <div id="invalidItemNameMessage" class="invalid-feedback">Invalid name. Please provide a valid name.</div>
                         </div>
                         <div class="mb-3">
                             <label for="itemQuantity" class="form-label">Quantity:</label>
-                            <input type="text" id="itemQuantity" class="form-control">
+                            <input type="text" id="itemQuantity" class="form-control" placeholder="E.g., 10">
+                            <div id="invalidItemQuantityMessage" class="invalid-feedback">Invalid quantity. Please provide a valid quantity.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="itemPrice" class="form-label">Price:</label>
-                            <input type="text" id="itemPrice" class="form-control">
+                            <label for="itemPrice" class="form-label">Price (Rs.):</label>
+                            <input type="text" id="itemPrice" class="form-control" placeholder="E.g., 100.00">
+                            <div id="invalidItemPriceMessage" class="invalid-feedback">Invalid price. Please provide a valid price.</div>
                         </div>
-                        <div id="main-03-buttons">
-                            <button class="btn btn-primary item-form-buttons">Save</button>
-                            <button class="btn btn-secondary item-form-buttons">Update</button>
-                            <button class="btn btn-warning item-form-buttons">Delete</button>
+                        <div id="main-03-buttons" class="mt-3">
+                            <button class="btn btn-primary item-form-buttons" id="btnSaveItem">Save</button>
+                            <button class="btn btn-secondary item-form-buttons" id="btnUpdateItem">Update</button>
+                            <button class="btn btn-warning item-form-buttons" id="btnDeleteItem">Delete</button>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -507,5 +510,6 @@
 <script src="models/OrderDetails.js"></script>
 
 <script src="controllers/validations/customerFormValidation.js"></script>
+<script src="controllers/validations/itemFormValidation.js"></script>
 </body>
 </html>
