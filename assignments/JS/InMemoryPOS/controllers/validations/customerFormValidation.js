@@ -1,42 +1,96 @@
 $(document).ready(function() {
-    $("#btnSaveCustomer").click(function(event) {
-        // Prevent the form from submitting
+    // Regular expressions
+    var regexCusID = /^C\d{2}-\d{3}$/;
+    var regexName = /^[A-Za-z .]{5,}$/;
+    var regexAddress = /^[A-Za-z0-9 .,'-]+$/;
+    var regexSalary = /^0\d{9}$/;
+
+    // Input fields
+    var customerIDField = $('#customerId');
+    var customerNameField = $('#customerName');
+    var customerAddressField = $('#customerAddress');
+    var customerPhoneField = $('#customerPhone');
+
+    // Error messages
+    var invalidIdMessage = $('#invalidIdMessage');
+    var invalidNameMessage = $('#invalidNameMessage');
+    var invalidAddressMessage = $('#invalidAddressMessage');
+    var invalidSalaryMessage = $('#invalidSalaryMessage');
+    var emptyFieldMessage = $('.notification-empty');
+
+    // Hide error messages initially
+    customerFormHideErrorMessages();
+
+    function customerFormHideErrorMessages() {
+        invalidIdMessage.hide();
+        invalidNameMessage.hide();
+        invalidAddressMessage.hide();
+        invalidSalaryMessage.hide();
+        emptyFieldMessage.hide();
+    }
+
+    function validateInput(regex, field, errorMessage) {
+        var isValid = regex.test(field.val());
+        if (!isValid) {
+            field.addClass('is-invalid');
+            errorMessage.show();
+        } else {
+            field.removeClass('is-invalid');
+            errorMessage.hide();
+        }
+        return isValid;
+    }
+
+    $('#btnSaveCustomer').click(function(event) {
         event.preventDefault();
 
-        // Get form values
-        var customerId = $("#customerId").val();
-        var customerName = $("#customerName").val();
-        var customerAddress = $("#customerAddress").val();
-        var customerSalary = parseFloat($("#customerSalary").val()) || 0;
+        // Validate inputs
+        var isValidCusID = validateInput(regexCusID, customerIDField, invalidIdMessage);
+        var isValidName = validateInput(regexName, customerNameField, invalidNameMessage);
+        var isValidAddress = validateInput(regexAddress, customerAddressField, invalidAddressMessage);
+        var isValidPhone = validateInput(regexSalary, customerPhoneField, invalidSalaryMessage);
 
         // Check if any field is empty
-        if (customerId === "" || customerName === "" || customerAddress === "" || customerSalary === 0) {
-            // Apply red border effect to empty fields for 3 seconds
-            $("input").each(function() {
-                if ($(this).val() === "") {
-                    $(this).css("border", "2px solid red");
-                }
-            });
-
-            // Reset border and show notification after 3 seconds
-            setTimeout(function() {
-                $("input").css("border", "");
-                showNotification("All fields are required");
-            }, 3000);
+        if (customerIDField.val() === '' || customerNameField.val() === '' || customerAddressField.val() === '' || customerPhoneField.val() === '') {
+            emptyFieldMessage.show();
+            return;
         } else {
-            // Fields are not empty, no action performed
+            emptyFieldMessage.hide();
         }
     });
 
-    function showNotification(message) {
-        // Display notification
-        var notification = $("<div class='notification'>" + message + "</div>").appendTo("body");
+    customerIDField.on('keyup', function() {
+        validateInput(regexCusID, customerIDField, invalidIdMessage);
+        enableSaveButton();
+    });
 
-        // Automatically close the notification after 5 seconds
-        setTimeout(function() {
-            notification.fadeOut(300, function() {
-                $(this).remove();
-            });
-        }, 5000);
+    customerNameField.on('keyup', function() {
+        validateInput(regexName, customerNameField, invalidNameMessage);
+        enableSaveButton();
+    });
+
+    customerAddressField.on('keyup', function() {
+        validateInput(regexAddress, customerAddressField, invalidAddressMessage);
+        enableSaveButton();
+    });
+
+    customerPhoneField.on('keyup', function() {
+        validateInput(regexSalary, customerPhoneField, invalidSalaryMessage);
+        enableSaveButton();
+    });
+
+    function enableSaveButton() {
+        if (customerIDField.hasClass('is-invalid') ||
+            customerNameField.hasClass('is-invalid') ||
+            customerAddressField.hasClass('is-invalid') ||
+            customerPhoneField.hasClass('is-invalid') ||
+            customerIDField.val() === '' ||
+            customerNameField.val() === '' ||
+            customerAddressField.val() === '' ||
+            customerPhoneField.val() === '') {
+            $('#btnSaveCustomer').prop('disabled', true);
+        } else {
+            $('#btnSaveCustomer').prop('disabled', false);
+        }
     }
 });

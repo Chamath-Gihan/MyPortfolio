@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
-        #notification-empty{
+        .notification-empty{
             display: inline-block;
-            position: relative;
-            left: 17vw;
+            width: 42vw;
+            text-align: center;
+            color: red;
         }
     </style>
 </head>
@@ -80,30 +81,33 @@
                         <h2>Register new Customers</h2>
                         <div class="mb-3">
                             <label for="customerId" class="form-label">Customer ID:</label>
-                            <input type="text" id="customerId" class="form-control">
+                            <input type="text" id="customerId" class="form-control" placeholder="E.g., C00-001">
+                            <div id="invalidIdMessage" class="invalid-feedback">Invalid Customer ID. Please follow the format C00-001.</div>
                         </div>
                         <div class="mb-3">
                             <label for="customerName" class="form-label">Name:</label>
-                            <input type="text" id="customerName" class="form-control">
+                            <input type="text" id="customerName" class="form-control" placeholder="E.g., John Doe">
+                            <div id="invalidNameMessage" class="invalid-feedback">Invalid name. Please provide a valid name.</div>
                         </div>
                         <div class="mb-3">
                             <label for="customerAddress" class="form-label">Address:</label>
-                            <input type="text" id="customerAddress" class="form-control">
+                            <input type="text" id="customerAddress" class="form-control" placeholder="E.g., 123 Main St, City">
+                            <div id="invalidAddressMessage" class="invalid-feedback">Invalid address. Please provide a valid address.</div>
                         </div>
                         <div class="mb-3">
                             <label for="customerPhone" class="form-label">Telephone Number:</label>
-                            <input type="text" id="customerPhone" class="form-control">
+                            <input type="text" id="customerPhone" class="form-control" placeholder="E.g., 0123456789">
+                            <div id="invalidSalaryMessage" class="invalid-feedback">Invalid phone number. Please provide a 10-digit phone number starting with 0.</div>
                         </div>
-                        <div id="notification-empty">All field are required</div>
-                        <div id="main-02-buttons">
+                        <div id="main-02-buttons" class="mt-3">
                             <button class="btn btn-primary customer-form-buttons" id="btnSaveCustomer">Save</button>
                             <button class="btn btn-secondary customer-form-buttons" id="btnUpdateCustomer">Update</button>
                             <button class="btn btn-warning customer-form-buttons" id="btnDeleteCustomer">Delete</button>
                         </div>
-
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-6 col-md-12 mb-3">
                 <div class="border-container">
                     <div class="search-table">
