@@ -205,6 +205,12 @@ header {
     height: 92vh;
 }
 
+#notification-empty{
+    display: inline-block;
+    position: relative;
+    left: 17vw;
+}
+
 /*--------------------------------------------------------Item-----------------------------------------------*/
 
 

@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        #notification-empty{
+            display: inline-block;
+            position: relative;
+            left: 17vw;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -87,6 +94,7 @@
                             <label for="customerPhone" class="form-label">Telephone Number:</label>
                             <input type="text" id="customerPhone" class="form-control">
                         </div>
+                        <div id="notification-empty">All field are required</div>
                         <div id="main-02-buttons">
                             <button class="btn btn-primary customer-form-buttons" id="btnSaveCustomer">Save</button>
                             <button class="btn btn-secondary customer-form-buttons" id="btnUpdateCustomer">Update</button>
