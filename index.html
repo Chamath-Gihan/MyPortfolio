@@ -14,10 +14,45 @@
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="assets/styles/laptop.css">
     <style>
+        #loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            z-index: 9999; /* Ensure the loading element is on top of everything */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #3498db; /* Loading spinner color */
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
     </style>
 </head>
 <body>
+
+<div id="loading">
+    <div class="loading-spinner"></div>
+    <!-- You can add additional loading message here if needed -->
+    Loading...
+</div>
+
     <header class="header">
         <nav>
            <ul class="nav-list">
@@ -355,4 +390,15 @@
         </section>
     </footer>
 </body>
+<script>
+    var loadingElement = document.getElementById('loading');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadingElement.style.display = 'flex'; // or 'block' based on your CSS styles
+    });
+
+    window.addEventListener('load', function() {
+        loadingElement.style.display = 'none';
+    });
+</script>
 </html>
