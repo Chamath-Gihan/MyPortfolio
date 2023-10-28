@@ -1,22 +1,27 @@
 let customers = []; // Array to store customer objects
 
+var customerIDField1 = $('#customerId');
+var customerNameField1 = $('#customerName');
+var customerAddressField1 = $('#customerAddress');
+var customerPhoneField1 = $('#customerPhone');
+
 function saveCustomer() {
-    if (validateInput(regexCusID, customerIDField, invalidIdMessage) &&
-        validateInput(regexName, customerNameField, invalidNameMessage) &&
-        validateInput(regexAddress, customerAddressField, invalidAddressMessage) &&
-        validateInput(regexSalary, customerPhoneField, invalidSalaryMessage)) {
+    // if (validateInput(regexCusID, customerIDField, invalidIdMessage) &&
+    //     validateInput(regexName, customerNameField, invalidNameMessage) &&
+    //     validateInput(regexAddress, customerAddressField, invalidAddressMessage) &&
+    //     validateInput(regexSalary, customerPhoneField, invalidSalaryMessage)) {
 
         let newCustomer = {
-            id: customerIDField.val(),
-            name: customerNameField.val(),
-            address: customerAddressField.val(),
-            salary: customerPhoneField.val()
+            id: customerIDField1.val(),
+            name: customerNameField1.val(),
+            address: customerAddressField1.val(),
+            salary: customerPhoneField1.val()
         };
 
         customers.push(newCustomer); // Add new customer to the array
         updateTable();
         clearFields();
-    }
+    // }
 }
 
 function updateTable() {
@@ -37,27 +42,27 @@ function updateTable() {
 
 function populateFields(index) {
     let customer = customers[index];
-    customerIDField.val(customer.id);
-    customerNameField.val(customer.name);
-    customerAddressField.val(customer.address);
-    customerPhoneField.val(customer.salary);
+    customerIDField1.val(customer.id);
+    customerNameField1.val(customer.name);
+    customerAddressField1.val(customer.address);
+    customerPhoneField1.val(customer.salary);
 }
 
 function clearFields() {
-    customerIDField.val('');
-    customerNameField.val('');
-    customerAddressField.val('');
-    customerPhoneField.val('');
+    customerIDField1.val('');
+    customerNameField1.val('');
+    customerAddressField1.val('');
+    customerPhoneField1.val('');
 }
 
 function updateCustomer() {
     let index = customers.findIndex(customer => customer.id === customerIDField.val());
     if (index !== -1) {
         customers[index] = {
-            id: customerIDField.val(),
-            name: customerNameField.val(),
-            address: customerAddressField.val(),
-            salary: customerPhoneField.val()
+            id: customerIDField1.val(),
+            name: customerNameField1.val(),
+            address: customerAddressField1.val(),
+            salary: customerPhoneField1.val()
         };
         updateTable();
         clearFields();
@@ -65,7 +70,7 @@ function updateCustomer() {
 }
 
 function deleteCustomer() {
-    let index = customers.findIndex(customer => customer.id === customerIDField.val());
+    let index = customers.findIndex(customer => customer.id === customerIDField1.val());
     if (index !== -1) {
         customers.splice(index, 1);
         updateTable();

@@ -1,9 +1,9 @@
-let customer={
-    id:"",
-    name:"",
-    address:"",
-    salary:0
-}
+// let customer={
+//     id:"",
+//     name:"",
+//     address:"",
+//     salary:0
+// }
 class Customer {
     constructor(id, name, address, phone) {
         this.id = id;
