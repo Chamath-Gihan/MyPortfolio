@@ -1,24 +1,27 @@
 $(document).ready(function() {
     var regexItemId = /^I\d{2}-\d{3}$/;
-    var regexItemName = /^[A-Za-z0-9 .,'-]+$/;
-    var regexItemQuantity = /^[1-9]\d*$/;
+    var regexItemName = /^[A-Za-z .]{3,}$/;
+    var regexItemQuantity = /^\d+$/;
     var regexItemPrice = /^\d+(\.\d{1,2})?$/;
+
+    var itemIdField = $('#itemId');
+    var itemNameField = $('#itemName');
+    var itemQuantityField = $('#itemQuantity');
+    var itemPriceField = $('#itemPrice');
 
     var invalidItemIdMessage = $('#invalidItemIdMessage');
     var invalidItemNameMessage = $('#invalidItemNameMessage');
     var invalidItemQuantityMessage = $('#invalidItemQuantityMessage');
     var invalidItemPriceMessage = $('#invalidItemPriceMessage');
-    var emptyFieldItemMessage = $('.notification-empty-item');
 
-    // Hide error messages initially
-    itemFormHideErrorMessages();
+    var emptyFieldMessage = $('.notification-empty');
 
     function itemFormHideErrorMessages() {
         invalidItemIdMessage.hide();
         invalidItemNameMessage.hide();
         invalidItemQuantityMessage.hide();
         invalidItemPriceMessage.hide();
-        emptyFieldItemMessage.hide();
+        emptyFieldMessage.hide();
     }
 
     function validateInput(regex, field, errorMessage) {
@@ -33,62 +36,69 @@ $(document).ready(function() {
         return isValid;
     }
 
+    function enableSaveButton() {
+        if (
+            itemIdField.hasClass('is-invalid') ||
+            itemNameField.hasClass('is-invalid') ||
+            itemQuantityField.hasClass('is-invalid') ||
+            itemPriceField.hasClass('is-invalid')
+        ) {
+            $('#btnSaveItem').prop('disabled', true);
+            $('#btnUpdateItem').prop('disabled', true);
+            $('#btnDeleteItem').prop('disabled', true);
+        } else if (
+            itemIdField.val() === '' ||
+            itemNameField.val() === '' ||
+            itemQuantityField.val() === '' ||
+            itemPriceField.val() === ''
+        ) {
+            $('#btnSaveItem').prop('disabled', true);
+            $('#btnUpdateItem').prop('disabled', true);
+            $('#btnDeleteItem').prop('disabled', true);
+            emptyFieldMessage.show();
+        } else {
+            $('#btnSaveItem').prop('disabled', false);
+            $('#btnUpdateItem').prop('disabled', false);
+            $('#btnDeleteItem').prop('disabled', false);
+            emptyFieldMessage.hide();
+        }
+    }
+
     $('#btnSaveItem').click(function(event) {
         event.preventDefault();
 
-        // Validate inputs
-        var isValidItemId = validateInput(regexItemId, $('#itemId'), invalidItemIdMessage);
-        var isValidItemName = validateInput(regexItemName, $('#itemName'), invalidItemNameMessage);
-        var isValidItemQuantity = validateInput(regexItemQuantity, $('#itemQuantity'), invalidItemQuantityMessage);
-        var isValidItemPrice = validateInput(regexItemPrice, $('#itemPrice'), invalidItemPriceMessage);
+        var isValidItemId = validateInput(regexItemId, itemIdField, invalidItemIdMessage);
+        var isValidItemName = validateInput(regexItemName, itemNameField, invalidItemNameMessage);
+        var isValidItemQuantity = validateInput(regexItemQuantity, itemQuantityField, invalidItemQuantityMessage);
+        var isValidItemPrice = validateInput(regexItemPrice, itemPriceField, invalidItemPriceMessage);
 
-        // Check if any field is empty
-        if ($('#itemId').val() === '' || $('#itemName').val() === '' || $('#itemQuantity').val() === '' || $('#itemPrice').val() === '') {
-            emptyFieldItemMessage.show();
-            $('#btnSaveItem').prop('disabled', true);
+        if (itemIdField.val() === '' || itemNameField.val() === '' || itemQuantityField.val() === '' || itemPriceField.val() === '') {
+            emptyFieldMessage.show();
             return;
         } else {
-            emptyFieldItemMessage.hide();
+            emptyFieldMessage.hide();
         }
 
-        // Enable/Disable buttons based on input validation
-        enableSaveButton(isValidItemId, isValidItemName, isValidItemQuantity, isValidItemPrice);
-    });
-
-    $('#itemId').on('keyup', function() {
-        validateInput(regexItemId, $('#itemId'), invalidItemIdMessage);
         enableSaveButton();
     });
 
-    $('#itemName').on('keyup', function() {
-        validateInput(regexItemName, $('#itemName'), invalidItemNameMessage);
+    itemIdField.on('keyup', function() {
+        validateInput(regexItemId, itemIdField, invalidItemIdMessage);
         enableSaveButton();
     });
 
-    $('#itemQuantity').on('keyup', function() {
-        validateInput(regexItemQuantity, $('#itemQuantity'), invalidItemQuantityMessage);
+    itemNameField.on('keyup', function() {
+        validateInput(regexItemName, itemNameField, invalidItemNameMessage);
         enableSaveButton();
     });
 
-    $('#itemPrice').on('keyup', function() {
-        validateInput(regexItemPrice, $('#itemPrice'), invalidItemPriceMessage);
+    itemQuantityField.on('keyup', function() {
+        validateInput(regexItemQuantity, itemQuantityField, invalidItemQuantityMessage);
         enableSaveButton();
     });
 
-    function enableSaveButton() {
-        var isValidInputs = validateInput(regexItemId, $('#itemId'), invalidItemIdMessage) &&
-            validateInput(regexItemName, $('#itemName'), invalidItemNameMessage) &&
-            validateInput(regexItemQuantity, $('#itemQuantity'), invalidItemQuantityMessage) &&
-            validateInput(regexItemPrice, $('#itemPrice'), invalidItemPriceMessage);
-
-        if (isValidInputs) {
-            $('#btnSaveItem').prop('disabled', false);
-            $('#btnDeleteItem').prop('disabled', false);
-            $('#btnUpdateItem').prop('disabled', false);
-        } else {
-            $('#btnSaveItem').prop('disabled', true);
-            $('#btnDeleteItem').prop('disabled', true);
-            $('#btnUpdateItem').prop('disabled', true);
-        }
-    }
+    itemPriceField.on('keyup', function() {
+        validateInput(regexItemPrice, itemPriceField, invalidItemPriceMessage);
+        enableSaveButton();
+    });
 });
