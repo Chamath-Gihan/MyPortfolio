@@ -60,7 +60,7 @@ function deleteItem() {
 
 function updateItemTable() {
     // Clear existing table rows and add items to the table
-    var itemTableBody = $('table tbody');
+    var itemTableBody = $('#item-details-body'); // Specify the target tbody element by its ID
     itemTableBody.empty();
 
     items.forEach(function(item) {
@@ -73,6 +73,7 @@ function updateItemTable() {
         populateItemFields(index);
     });
 }
+
 
 function populateItemFields(index) {
     let item = items[index];

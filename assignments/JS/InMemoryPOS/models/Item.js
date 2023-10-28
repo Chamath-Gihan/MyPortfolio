@@ -5,16 +5,6 @@ class Item {
         this.quantity = quantity;
         this.price = price;
     }
-
-    static createItem(id, name, quantity, price) {
-        return new Item(id, name, quantity, price);
-    }
-
-    static updateItemDetails(item, newName, newQuantity, newPrice) {
-        item.name = newName;
-        item.quantity = newQuantity;
-        item.price = newPrice;
-    }
 }
 
 var items = [];

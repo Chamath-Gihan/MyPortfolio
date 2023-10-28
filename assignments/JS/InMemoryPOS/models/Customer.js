@@ -5,16 +5,6 @@ class Customer {
         this.address = address;
         this.phone = phone;
     }
-
-    static createCustomer(id, name, address, phone) {
-        return new Customer(id, name, address, phone);
-    }
-
-    static updateCustomerDetails(customer, newName, newAddress, newPhone) {
-        customer.name = newName;
-        customer.address = newAddress;
-        customer.phone = newPhone;
-    }
 }
 var customers = [];
 var originalCustomers = []; // Store a copy of the original customers for filtering

@@ -195,7 +195,7 @@
                                     <th>Price(Rs.)</th>
                                 </tr>
                                 </thead>
-                                <tbody></tbody>
+                                <tbody id="item-details-body"></tbody>
                             </table>
                         </div>
                     </div>
@@ -239,8 +239,6 @@
                                         <div class="form-group">
                                             <label>Customer ID:</label>
                                             <select class="form-control" id="selectCusID">
-                                                <option value="1">A</option>
-                                                <option value="2">B</option>
                                             </select>
                                             <span class="control-error"
                                                   id="cus-empty-error"></span>
@@ -282,9 +280,6 @@
                                         <div class="form-group">
                                             <label>Item Code :</label>
                                             <select class="form-control" id="selectItemCode">
-                                                <option value="I01-001">I01-001</option>
-                                                <option value="I02-002">I02-002</option>
-                                                <option value="I03-003">I03-003</option>
                                                 <!-- Add more options as needed -->
                                             </select>
                                             <span class="control-error" id="item-code-error"></span>
@@ -407,15 +402,11 @@
 
 <script src="controllers/validations/orderFormValidation.js"></script>
 <script src="models/Orders.js"></script>
-<script src="models/OrderDetails.js"></script>
+<script src="controllers/orderFormController.js"></script>
 
 <script src="controllers/validations/customerFormValidation.js"></script>
 <script src="models/Customer.js"></script>
 <script src="controllers/customerFormController.js"></script>
-
-
-
-
 
 </body>
 </html>

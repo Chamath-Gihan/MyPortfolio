@@ -46,20 +46,18 @@ function saveCustomer() {
 }
 
 function updateTable() {
-    // Clear existing table rows
-    $('tbody').empty();
+    $('#customer-details-body').empty();
 
-    // Add customers to the table
     customers.forEach(function(customer) {
-        $('tbody').append(`<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`);
+        $('#customer-details-body').append(`<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`);
     });
 
-    // Add click event to table rows to populate fields for editing
-    $('tbody tr').click(function() {
+    $('#customer-details-body tr').click(function() {
         let index = $(this).index();
         populateFields(index);
     });
 }
+
 
 function populateFields(index) {
     let customer = customers[index];
