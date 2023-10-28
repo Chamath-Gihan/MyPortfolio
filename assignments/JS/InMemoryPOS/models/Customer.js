@@ -16,4 +16,5 @@ class Customer {
         customer.phone = newPhone;
     }
 }
-let customers = [];
+var customers = [];
+var originalCustomers = []; // Store a copy of the original customers for filtering

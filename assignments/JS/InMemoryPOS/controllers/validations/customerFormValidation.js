@@ -42,21 +42,30 @@ $(document).ready(function() {
     }
 
     function enableSaveButton() {
-        if (customerIDField.hasClass('is-invalid') ||
+        if (
+            customerIDField.hasClass('is-invalid') ||
             customerNameField.hasClass('is-invalid') ||
             customerAddressField.hasClass('is-invalid') ||
-            customerPhoneField.hasClass('is-invalid') ||
-            customerIDField.val() === '' ||
-            customerNameField.val() === '' ||
-            customerAddressField.val() === '' ||
-            customerPhoneField.val() === '') {
+            customerPhoneField.hasClass('is-invalid')
+        ) {
             $('#btnSaveCustomer').prop('disabled', true);
             $('#btnUpdateCustomer').prop('disabled', true);
             $('#btnDeleteCustomer').prop('disabled', true);
+        } else if (
+            customerIDField.val() === '' ||
+            customerNameField.val() === '' ||
+            customerAddressField.val() === '' ||
+            customerPhoneField.val() === ''
+        ) {
+            $('#btnSaveCustomer').prop('disabled', true);
+            $('#btnUpdateCustomer').prop('disabled', true);
+            $('#btnDeleteCustomer').prop('disabled', true);
+            emptyFieldMessage.show();
         } else {
             $('#btnSaveCustomer').prop('disabled', false);
             $('#btnUpdateCustomer').prop('disabled', false);
             $('#btnDeleteCustomer').prop('disabled', false);
+            emptyFieldMessage.hide();
         }
     }
 

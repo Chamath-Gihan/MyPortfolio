@@ -1,5 +1,3 @@
- // Array to store customer objects
-
 var customerIDField1 = $('#customerId');
 var customerNameField1 = $('#customerName');
 var customerAddressField1 = $('#customerAddress');
@@ -41,24 +39,11 @@ function saveCustomer() {
         customers.push(newCustomer);
         updateTable();
         clearFields();
-
-        // Clear the is-invalid class from the fields
-        customerIDField1.removeClass('is-invalid');
-        customerNameField1.removeClass('is-invalid');
-        customerAddressField1.removeClass('is-invalid');
-        customerPhoneField1.removeClass('is-invalid');
-
-        // Clear the error messages if they were displayed
-        $('#invalidIdMessage').hide();
-        $('#invalidNameMessage').hide();
-        $('#invalidAddressMessage').hide();
-        $('#invalidSalaryMessage').hide();
+        resetFormFields();
 
         console.log('Fields cleared and error messages hidden.'); // Add this line for debugging
     }
 }
-
-
 
 function updateTable() {
     // Clear existing table rows
@@ -102,6 +87,7 @@ function updateCustomer() {
         };
         updateTable();
         clearFields();
+        resetFormFields();
     }
 }
 
@@ -111,6 +97,7 @@ function deleteCustomer() {
         customers.splice(index, 1);
         updateTable();
         clearFields();
+        resetFormFields();
     }
 }
 
@@ -137,7 +124,6 @@ $('#button-search-customer').click(function() {
     );
     updateTable();
 });
-
 
 // Add input event listener to the search input field
 $('#search-customer-input').on('input', function() {
@@ -178,3 +164,23 @@ function updateSuggestionList(filteredCustomers) {
         suggestionList.empty(); // Clear the suggestion list after selecting a suggestion
     });
 }
+
+function resetFormFields() {
+    customerIDField1.val('');
+    customerNameField1.val('');
+    customerAddressField1.val('');
+    customerPhoneField1.val('');
+
+    // Remove error classes and hide error messages
+    customerIDField1.removeClass('is-invalid');
+    customerNameField1.removeClass('is-invalid');
+    customerAddressField1.removeClass('is-invalid');
+    customerPhoneField1.removeClass('is-invalid');
+
+    invalidIdMessage.hide();
+    invalidNameMessage.hide();
+    invalidAddressMessage.hide();
+    invalidSalaryMessage.hide();
+    emptyFieldMessage.hide();
+}
+
